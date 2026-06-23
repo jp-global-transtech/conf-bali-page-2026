@@ -1,0 +1,205 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+/* Professional Corporate Color Palette */
+:root {
+    --forest: #2d5a3d;
+    --sage: #5a7d5a;
+    --atmosphere: #4a7c8c;
+    --ivory: #f8f6f3;
+    --earth: #6b5b4f;
+}
+
+/* Custom text gradient */
+.text-gradient-atmosphere {
+    background: linear-gradient(135deg, #4ade80 0%, #22c55e 50%, #16a34a 100%);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    background-clip: text;
+}
+
+/* Network background pattern */
+.network-bg {
+    background-image: radial-gradient(circle at 1px 1px, rgba(255,255,255,0.1) 1px, transparent 0);
+    background-size: 40px 40px;
+}
+
+/* Alpine.js x-cloak - hides elements until Alpine is ready */
+[x-cloak] {
+    display: none !important;
+}
+
+/* Simple fade-in animation */
+.fade-in {
+    opacity: 0;
+    animation: fadeIn 0.5s ease-out forwards;
+}
+
+@keyframes fadeIn {
+    to { opacity: 1; }
+}
+
+/* Cinematic section styles */
+.section-cinematic {
+    position: relative;
+    scroll-margin-top: 5rem;
+}
+
+/* Ensure sections don't overflow horizontally */
+section {
+    overflow-x: hidden;
+}
+
+/* Smooth scrolling */
+html {
+    scroll-behavior: smooth;
+}
+
+/* Custom scrollbar */
+::-webkit-scrollbar {
+    width: 8px;
+}
+
+::-webkit-scrollbar-track {
+    background: #f1f1f1;
+}
+
+::-webkit-scrollbar-thumb {
+    background: #16a34a;
+    border-radius: 4px;
+}
+
+::-webkit-scrollbar-thumb:hover {
+    background: #15803d;
+}
+
+/* Fix for Alpine.js x-collapse transition */
+[x-collapse] {
+    transition: all 0.3s ease-in-out;
+    overflow: hidden;
+}
+
+[x-collapse].x-collapse {
+    max-height: 0;
+}
+
+[x-collapse]:not(.x-collapse) {
+    max-height: 500px;
+}
+
+/* Ensure proper container widths */
+@media (min-width: 1280px) {
+    .max-w-7xl {
+        max-width: 80rem;
+    }
+}
+
+/* Z-index scale for consistent layering */
+.z-loading { z-index: 9999; }
+.z-modal { z-index: 1000; }
+.z-dropdown { z-index: 100; }
+.z-nav { z-index: 50; }
+.z-base { z-index: 1; }
+
+/* Fix overlapping elements */
+main {
+    position: relative;
+    z-index: 1;
+}
+
+/* Footer spacing */
+footer {
+    position: relative;
+    z-index: 10;
+}
+
+/* Section reveal animation for scroll effects */
+.section-reveal {
+    opacity: 0;
+    transform: translateY(20px);
+    transition: opacity 0.6s ease-out, transform 0.6s ease-out;
+}
+
+.section-reveal.visible {
+    opacity: 1;
+    transform: translateY(0);
+}
+
+/* Consistent section spacing */
+.section-spacing {
+    padding-top: 4rem;
+    padding-bottom: 4rem;
+}
+
+@media (min-width: 768px) {
+    .section-spacing {
+        padding-top: 5rem;
+        padding-bottom: 5rem;
+    }
+}
+
+/* Card hover effects */
+.card-hover {
+    transition: transform 0.2s ease-out, box-shadow 0.2s ease-out;
+}
+
+.card-hover:hover {
+    transform: translateY(-2px);
+    box-shadow: 0 10px 25px -5px rgba(0, 0, 0, 0.1);
+}
+
+/* Smooth link transitions */
+a {
+    transition: color 0.2s ease;
+}
+
+/* Button focus states for accessibility */
+button:focus-visible,
+a:focus-visible {
+    outline: 2px solid #16a34a;
+    outline-offset: 2px;
+}
+
+/* Hero Section Specific Styles */
+.hero-gradient-bg {
+    background: linear-gradient(135deg, rgba(255,255,255,1) 0%, rgba(244,250,246,0.8) 50%, rgba(240,249,244,1) 100%);
+}
+
+/* Glass morphism for hero elements */
+.hero-glass {
+    background: rgba(255, 255, 255, 0.85);
+    backdrop-filter: blur(12px);
+    -webkit-backdrop-filter: blur(12px);
+    border: 1px solid rgba(22, 101, 52, 0.08);
+}
+
+/* Smooth hero content reveal */
+.hero-content-reveal {
+    animation: heroFadeIn 0.8s ease-out forwards;
+}
+
+@keyframes heroFadeIn {
+    from {
+        opacity: 0;
+        transform: translateY(20px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+/* Logo Cloud Section - Marquee Animation */
+@keyframes marquee {
+    0% { transform: translateX(0); }
+    100% { transform: translateX(-50%); }
+}
+
+.animate-marquee {
+    animation: marquee 30s linear infinite;
+}
+
+.marquee-container:hover .animate-marquee {
+    animation-play-state: paused;
+}
