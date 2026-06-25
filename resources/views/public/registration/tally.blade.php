@@ -16,7 +16,7 @@
     @vite(['resources/css/app.css', 'resources/js/app.js'])
 </head>
 <body class="font-sans antialiased text-slate-900 bg-[#f7f9f5]">
-    <main class="min-h-screen overflow-hidden">
+    <main class="min-h-screen">
         <section class="relative px-4 py-16 sm:px-6 lg:px-8 lg:py-20">
             <div class="absolute inset-0 -z-10">
     <div class="absolute inset-0 bg-gradient-to-br from-emerald-50 via-white to-slate-50"></div>
@@ -79,13 +79,14 @@
     <div class="pt-6 bg-white">
 
         <iframe
-            data-tally-src="https://tally.so/r/ZjWXVA?hideTitle=1&transparentBackground=1&dynamicHeight=1&fontSize=18px"
+            data-tally-src="https://tally.so/r/ZjWXVA?hideTitle=1&transparentBackground=1&dynamicHeight=1&fontSize=16px"
             width="100%"
-            height="2200"
+            height="2800"
             frameborder="0"
             marginheight="0"
             marginwidth="0"
-            title="Global Environment & Transition Summit (GETS) 2026 Registration Form">
+            title="Global Environment & Transition Summit (GETS) 2026 Registration Form"
+            style="min-height: 2800px;">
         </iframe>
 
     </div>
