@@ -1,6 +1,6 @@
 @extends('layouts.conference')
 
-@section('title', 'Experience Bali | Bali 2026 Conference')
+@section('title', 'Experience Bali | GETS 2026 Conference')
 
 @section('content')
 {{-- Hero Teaser for Experience --}}
@@ -11,6 +11,9 @@
 
 {{-- Transportation --}}
 @include('sections.experience.transportation')
+
+{{-- Visa Information --}}
+@include('sections.experience.visa-information')
 
 {{-- Accommodations --}}
 @include('sections.experience.accommodations')

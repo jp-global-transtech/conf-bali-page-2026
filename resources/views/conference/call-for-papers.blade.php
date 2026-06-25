@@ -81,29 +81,51 @@
                         </div>
                         <div>
                             <h3 class="font-display text-xl text-forest font-semibold mb-3">Publication Opportunity</h3>
-                            <p class="text-earth leading-relaxed mb-4">
-                                Selected papers will be considered for publication in:
+                            <p class="text-earth leading-relaxed mb-6">
+                                Selected manuscripts will be considered for publication opportunities through academic review and editorial evaluation.
                             </p>
-                            <ul class="space-y-2 text-earth">
-                                <li class="flex items-start gap-2">
+
+                            <div class="space-y-5">
+                                {{-- Journal Publication --}}
+                                <div class="flex items-start gap-3">
                                     <svg class="w-5 h-5 text-sage flex-shrink-0 mt-0.5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                                         <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7" />
                                     </svg>
-                                    <span>Official Conference Proceedings (ISSN registered)</span>
-                                </li>
-                                <li class="flex items-start gap-2">
+                                    <div>
+                                        <h4 class="font-display text-lg font-semibold text-forest mb-1">Journal Publication Opportunities</h4>
+                                        <p class="text-earth leading-relaxed">High-quality papers may be recommended for publication in partner academic journals or special issues.</p>
+                                    </div>
+                                </div>
+
+                                {{-- Conference Proceedings --}}
+                                <div class="flex items-start gap-3">
                                     <svg class="w-5 h-5 text-sage flex-shrink-0 mt-0.5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                                         <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7" />
                                     </svg>
-                                    <span>Edited Volume with Springer/Elsevier (Under consideration)</span>
-                                </li>
-                                <li class="flex items-start gap-2">
+                                    <div>
+                                        <h4 class="font-display text-lg font-semibold text-forest mb-1">Conference Proceedings / Edited Volume</h4>
+                                        <p class="text-earth leading-relaxed">Accepted manuscripts may be considered for inclusion in conference proceedings or edited academic publications.</p>
+                                    </div>
+                                </div>
+
+                                {{-- Academic Quality Review --}}
+                                <div class="flex items-start gap-3">
                                     <svg class="w-5 h-5 text-sage flex-shrink-0 mt-0.5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                                         <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7" />
                                     </svg>
-                                    <span>Special Issue in Partner Journals</span>
-                                </li>
-                            </ul>
+                                    <div>
+                                        <h4 class="font-display text-lg font-semibold text-forest mb-1">Academic Quality Review</h4>
+                                        <p class="text-earth leading-relaxed">All manuscripts will undergo editorial screening, peer-review evaluation, and similarity checking.</p>
+                                    </div>
+                                </div>
+                            </div>
+
+                            {{-- Publication Note --}}
+                            <div class="mt-6 bg-sage/10 rounded-lg p-4 border border-sage/20">
+                                <p class="text-sm text-earth">
+                                    <strong>Note:</strong> Publication channels, guidelines, and requirements will be announced after confirmation with academic partners.
+                                </p>
+                            </div>
                         </div>
                     </div>
                 </div>
