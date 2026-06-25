@@ -88,7 +88,7 @@
             </a>
 
             {{-- Secondary CTA - Submit Abstract --}}
-            <a href="{{ route('conference.call-for-abstract') }}" class="inline-flex items-center gap-2 px-8 py-4 bg-white text-forest font-semibold rounded-lg border-2 border-forest hover:bg-forest-5 transition-all">
+            <a href="{{ route('conference.call-for-abstract') }}" class="inline-flex items-center gap-2 px-8 py-4 bg-white text-forest font-semibold rounded-lg border-2 border-forest hover:bg-forest-50 transition-all">
                 <span>Submit Abstract</span>
             </a>
 
@@ -140,7 +140,7 @@
                     }
                 }
             }"
-             x-init="countdown.init(); setTimeout(() => visible = true, 100); $watch('$destroy', () => countdown.destroy())"
+             x-init="countdown.init(); setTimeout(() => visible = true, 100)"
              x-transition:enter="transition ease-out duration-800 delay-1000"
              x-transition:enter-start="opacity-0 translate-y-4"
              x-transition:enter-end="opacity-100 translate-y-0">

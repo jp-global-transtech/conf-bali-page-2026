@@ -17,7 +17,7 @@
         <div class="text-center mb-12">
             <h2 class="text-3xl font-bold text-gray-900 mb-4">Call for Abstract</h2>
             <p class="text-gray-600 max-w-2xl mx-auto">
-                We welcome abstract submissions across 8 interdisciplinary sub-themes on sustainable business and environmental management
+                We welcome abstract submissions across 13 interdisciplinary sub-themes on sustainable business and environmental management
             </p>
         </div>
 

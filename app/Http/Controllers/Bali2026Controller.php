@@ -125,11 +125,16 @@ class Bali2026Controller extends Controller
     /**
      * Show the call for abstract page
      */
-    public function callForAbstract(): View
-    {
-        $subthemes = config('conference.call_for_papers_subthemes', []);
-        return view('conference.call-for-papers', compact('subthemes'));
-    }
+ public function callForAbstract(): View
+{
+    $subthemes = config('conference.call_for_papers_subthemes', []);
+    $conference = config('conference');
+
+    return view(
+        'conference.call-for-papers',
+        compact('subthemes', 'conference')
+    );
+}
 
     /**
      * Download calendar file

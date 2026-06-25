@@ -43,13 +43,18 @@ return [
     */
 
     'call_for_papers_subthemes' => [
-        'Green marketing and conscious consumption',
-        'Green Human Resources Management (HRM) Practices',
-        'Corporate Social Responsibility',
+        'Green Marketing and Conscious Consumption',
+        'Green Human Resource Management (HRM) Practices',
+        'Corporate Social Responsibility (CSR)',
         'Environmental, Social, and Governance (ESG) Management',
-        'Artificial Intelligence and Sustainable Business models',
-        'Circular economy and waste reduction management',
-        'Sustainable Strategic management and business policy',
-        'Entrepreneurship and startups for sustainable development',
+        'Artificial Intelligence and Sustainable Business Models',
+        'Sustainable Strategic Management and Business Policy',
+        'Entrepreneurship and Startups for Sustainable Development',
+        'Green Technology and Sustainable Innovation',
+        'Renewable Energy and Climate-Resilient Infrastructure',
+        'Sustainable Materials and Circular Engineering',
+        'Circular Economy and Waste Reduction Management',
+        'Energy Efficiency and Sustainable Industrial Practices',
+        'Climate Adaptation Technology and Community Resilience',
     ],
 ];
