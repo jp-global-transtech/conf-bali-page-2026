@@ -22,32 +22,46 @@
                 <h1 class="text-3xl md:text-4xl lg:text-5xl font-bold text-gray-900 mb-4">
                     Speakers
                 </h1>
-                <p class="text-lg text-gray-600 max-w-2xl mx-auto">
-                    Global experts and thought leaders sharing insights on climate resilience, sustainability, and environmental transition.
+                <p class="text-lg text-gray-600 max-w-3xl mx-auto">
+                    Distinguished experts and thought leaders from Indonesia, India, and around the world sharing insights on climate resilience, sustainability, and environmental transition.
                 </p>
             </div>
         </div>
     </div>
 
     {{-- All Speakers Grid --}}
-    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-16">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-12">
         <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 gap-8">
             @foreach ($allSpeakers as $speaker)
-                <div class="bg-white border border-gray-200 rounded-2xl p-6 text-center hover:shadow-lg transition-all">
+                <div class="bg-white border border-gray-200 rounded-2xl p-6 text-center hover:shadow-lg transition-all relative">
+                    {{-- TBA Badge (for placeholder speakers) --}}
+                    @if(!$speaker['photo'] || !file_exists(public_path($speaker['photo'])))
+                    <div class="absolute top-4 right-4">
+                        <span class="inline-flex items-center gap-1 px-2 py-1 bg-amber-100 text-amber-700 text-xs font-semibold rounded-full">
+                            <svg class="w-3 h-3" fill="currentColor" viewBox="0 0 20 20">
+                                <path fill-rule="evenodd" d="M10 18a8 8 0 100-16 8 8 0 000 16zm1-12a1 1 0 10-2 0v4a1 1 0 00.293.707l2.828 2.829a1 1 0 101.415-1.415L11 9.586V6z" clip-rule="evenodd"/>
+                            </svg>
+                            To Be Announced
+                        </span>
+                    </div>
+                    @endif
+
                     {{-- Speaker Photo --}}
-                    <div class="mx-auto w-32 h-32 rounded-full bg-gradient-to-br from-green-50 to-green-100 flex items-center justify-center overflow-hidden mb-4">
+                    <div class="mx-auto w-32 h-32 rounded-full @if($speaker['photo'] && file_exists(public_path($speaker['photo']))) from-green-50 to-green-100 @else from-amber-50 to-amber-100 @endif flex items-center justify-center overflow-hidden mb-4">
                         @if ($speaker['photo'] && file_exists(public_path($speaker['photo'])))
                             <img src="{{ asset($speaker['photo']) }}" alt="{{ $speaker['name'] }}" class="w-full h-full object-cover">
                         @else
-                            <span class="text-3xl font-bold text-green-600">{{ $speaker['initials'] }}</span>
+                            <span class="text-3xl font-bold @if($speaker['photo'] && file_exists(public_path($speaker['photo']))) text-green-600 @else text-amber-600 @endif">{{ $speaker['initials'] }}</span>
                         @endif
                     </div>
 
                     {{-- Name --}}
-                    <h3 class="text-lg font-semibold text-gray-900 mb-2">{{ $speaker['name'] }}</h3>
+                    <h4 class="text-lg font-semibold text-gray-900 mb-2">{{ $speaker['name'] }}</h4>
 
                     {{-- Title --}}
-                    <p class="text-gray-600 text-sm mb-1">{{ $speaker['title'] }}</p>
+                    @if(isset($speaker['title']) && $speaker['title'])
+                        <p class="text-gray-600 text-sm mb-1">{{ $speaker['title'] }}</p>
+                    @endif
 
                     {{-- Department (if exists) --}}
                     @if(isset($speaker['department']) && $speaker['department'])
@@ -62,7 +76,6 @@
 
                     {{-- Topic --}}
                     <div class="border-t border-gray-100 pt-4">
-                        <h4 class="text-xs font-semibold text-gray-700 mb-2">Topic</h4>
                         <p class="text-gray-600 text-xs leading-relaxed">{{ $speaker['topic'] }}</p>
                     </div>
                 </div>
