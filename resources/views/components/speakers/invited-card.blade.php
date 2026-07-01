@@ -7,11 +7,18 @@
 
 <div
     {{ $attributes }}
-    class="bg-white border border-slate-200 rounded-2xl p-4
+    class="bg-white border border-slate-200 rounded-2xl p-4 pt-8
            flex flex-col items-center text-center gap-3
            cursor-pointer hover:border-orange-200 hover:bg-orange-50/30
-           transition-all duration-200 group"
+           transition-all duration-200 group relative"
 >
+    {{-- Status Badge (top-right) --}}
+    @if(!$speaker['confirmed'])
+        <div class="absolute top-3 right-3 z-10">
+            <x-speakers.status-badge status="pending" />
+        </div>
+    @endif
+
     {{-- Photo --}}
     @if ($speaker['photo'])
         <img
@@ -36,7 +43,7 @@
             {{ $speaker['name'] }}
         </p>
         <p class="text-xs text-slate-400 mt-0.5 truncate">
-            {{ $speaker['institution'] }} {{ $speaker['flag'] }}
+            {{ $speaker['institution'] }}
         </p>
     </div>
 

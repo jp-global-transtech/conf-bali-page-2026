@@ -1,6 +1,6 @@
 @extends('layouts.conference')
 
-@section('title', 'Experience Bali | GETS 2026 Conference')
+@section('title', 'Participant Guide | GETS 2026 Conference')
 
 @section('content')
 {{-- Hero Teaser for Experience --}}

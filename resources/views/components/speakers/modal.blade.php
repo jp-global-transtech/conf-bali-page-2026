@@ -85,7 +85,7 @@
                     </p>
                     <div class="flex items-center gap-2 mt-2 flex-wrap">
                         <span class="text-xs text-slate-400 flex items-center gap-1">
-                            {{ $speaker['flag'] }} {{ $speaker['country'] }}
+                            {{ $speaker['country'] }}
                         </span>
                         @if ($speaker['session_time'])
                             <span class="text-xs text-slate-400 flex items-center gap-1">

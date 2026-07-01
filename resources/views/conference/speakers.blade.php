@@ -4,7 +4,7 @@
 
 @section('content')
 @php
-    $allSpeakers = collect(include resource_path('data/speakers.php'))->where('confirmed', true);
+    $allSpeakers = collect(include resource_path('data/speakers.php'));
 @endphp
 
 <div class="min-h-screen bg-white pt-20">
@@ -30,20 +30,29 @@
     </div>
 
     {{-- All Speakers Grid --}}
-    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-12">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-12 mt-8">
         <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 gap-8">
             @foreach ($allSpeakers as $speaker)
-                <div class="bg-white border border-gray-200 rounded-2xl p-6 text-center hover:shadow-lg transition-all relative">
-                    {{-- TBA Badge (for placeholder speakers) --}}
-                    @if(!$speaker['photo'] || !file_exists(public_path($speaker['photo'])))
-                    <div class="absolute top-4 right-4">
-                        <span class="inline-flex items-center gap-1 px-2 py-1 bg-amber-100 text-amber-700 text-xs font-semibold rounded-full">
-                            <svg class="w-3 h-3" fill="currentColor" viewBox="0 0 20 20">
-                                <path fill-rule="evenodd" d="M10 18a8 8 0 100-16 8 8 0 000 16zm1-12a1 1 0 10-2 0v4a1 1 0 00.293.707l2.828 2.829a1 1 0 101.415-1.415L11 9.586V6z" clip-rule="evenodd"/>
-                            </svg>
-                            To Be Announced
-                        </span>
-                    </div>
+                <div class="bg-white border border-gray-200 rounded-2xl p-6 text-center hover:shadow-lg transition-all relative pt-10">
+                    {{-- Status Badge --}}
+                    @if(!$speaker['confirmed'])
+                        {{-- Unconfirmed speaker - show Invitation in Progress --}}
+                        <div class="absolute top-3 right-3 z-20">
+                            <span class="inline-flex items-center gap-1 px-2 py-1 bg-amber-50 text-amber-700 border border-amber-200 text-xs font-medium rounded-full">
+                                <span class="w-2 h-2 bg-amber-400 rounded-full"></span>
+                                Invitation in Progress
+                            </span>
+                        </div>
+                    @elseif(!$speaker['photo'] || !file_exists(public_path($speaker['photo'])))
+                        {{-- Confirmed but no photo - show To Be Announced --}}
+                        <div class="absolute top-3 right-3">
+                            <span class="inline-flex items-center gap-1 px-2 py-1 bg-amber-100 text-amber-700 text-xs font-semibold rounded-full">
+                                <svg class="w-3 h-3" fill="currentColor" viewBox="0 0 20 20">
+                                    <path fill-rule="evenodd" d="M10 18a8 8 0 100-16 8 8 0 000 16zm1-12a1 1 0 10-2 0v4a1 1 0 00.293.707l2.828 2.829a1 1 0 101.415-1.415L11 9.586V6z" clip-rule="evenodd"/>
+                                </svg>
+                                To Be Announced
+                            </span>
+                        </div>
                     @endif
 
                     {{-- Speaker Photo --}}
@@ -72,7 +81,7 @@
                     <p class="text-gray-700 text-sm font-medium mb-3">{{ $speaker['institution'] }}</p>
 
                     {{-- Country --}}
-                    <p class="text-gray-400 text-sm mb-4">{{ $speaker['flag'] }} {{ $speaker['country'] }}</p>
+                    <p class="text-gray-400 text-sm mb-4">{{ $speaker['country'] }}</p>
 
                     {{-- Topic --}}
                     <div class="border-t border-gray-100 pt-4">

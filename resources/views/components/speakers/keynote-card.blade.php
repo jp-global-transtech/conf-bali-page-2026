@@ -12,7 +12,14 @@
            transition-all duration-200 group"
 >
     {{-- Card head --}}
-    <div class="flex items-start gap-4 p-5 border-b border-slate-100">
+    <div class="flex items-start gap-4 p-5 pt-7 border-b border-slate-100 relative">
+
+        {{-- Status Badge (top-right) --}}
+        @if(!$speaker['confirmed'])
+            <div class="absolute top-3 right-3 z-10">
+                <x-speakers.status-badge status="pending" />
+            </div>
+        @endif
 
         {{-- Photo --}}
         @if ($speaker['photo'])
@@ -39,7 +46,6 @@
             </h3>
             <p class="text-xs text-slate-500 mt-0.5 truncate">
                 {{ $speaker['title'] }} · {{ $speaker['institution'] }}
-                {{ $speaker['flag'] }}
             </p>
         </div>
     </div>

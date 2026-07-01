@@ -30,6 +30,6 @@
     <div class="absolute bottom-0 left-0 right-0 bg-white/95 backdrop-blur-sm p-3 border-t border-gray-100">
         <h4 class="text-sm font-semibold text-gray-900 truncate">{{ $speaker['name'] }}</h4>
         <p class="text-xs text-gray-600 truncate">{{ $speaker['institution'] }}</p>
-        <span class="text-xs text-gray-400">{{ $speaker['flag'] }} {{ $speaker['country'] }}</span>
+        <span class="text-xs text-gray-400">{{ $speaker['country'] }}</span>
     </div>
 </div>

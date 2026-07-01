@@ -49,6 +49,9 @@
                 {{-- Speakers --}}
                 <a href="{{ route('conference.speakers') }}" class="text-sm font-medium {{ request()->routeIs('conference.speakers', 'conference.invited-speakers') ? 'text-forest font-semibold' : 'text-gray-600 hover:text-forest' }} transition-colors">{{ __('navigation.speakers') }}</a>
 
+                {{-- Experience --}}
+                <a href="{{ route('conference.experience') }}" class="text-sm font-medium {{ request()->routeIs('conference.experience') ? 'text-forest font-semibold' : 'text-gray-600 hover:text-forest' }} transition-colors">Participant Guide</a>
+
                 {{-- Call for Abstract --}}
                 <a href="{{ route('conference.call-for-abstract') }}" class="text-sm font-medium {{ request()->routeIs('conference.call-for-abstract') ? 'text-forest font-semibold' : 'text-gray-600 hover:text-forest' }} transition-colors">Call for Abstract</a>
 
@@ -182,6 +185,9 @@
 
             {{-- Speakers --}}
             <a href="{{ route('conference.speakers') }}" @click="mobileOpen = false" class="block px-4 py-2 {{ request()->routeIs('conference.speakers', 'conference.invited-speakers') ? 'text-forest bg-gray-50 font-semibold' : 'text-gray-600' }} hover:bg-gray-50 rounded-lg">{{ __('navigation.speakers') }}</a>
+
+            {{-- Experience --}}
+            <a href="{{ route('conference.experience') }}" @click="mobileOpen = false" class="block px-4 py-2 {{ request()->routeIs('conference.experience') ? 'text-forest bg-gray-50 font-semibold' : 'text-gray-600' }} hover:bg-gray-50 rounded-lg">Participant Guide</a>
 
             {{-- Call for Abstract --}}
             <a href="{{ route('conference.call-for-abstract') }}" @click="mobileOpen = false" class="block px-4 py-2 {{ request()->routeIs('conference.call-for-abstract') ? 'text-forest bg-gray-50 font-semibold' : 'text-gray-600' }} hover:bg-gray-50 rounded-lg">Call for Abstract</a>

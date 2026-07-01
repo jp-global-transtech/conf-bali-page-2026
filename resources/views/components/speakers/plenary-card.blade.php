@@ -43,7 +43,6 @@
             </h3>
             <p class="text-sm text-slate-500 mt-0.5">
                 {{ $speaker['title'] }} · {{ $speaker['institution'] }}
-                <span class="ml-1">{{ $speaker['flag'] }}</span>
             </p>
         </div>
 
