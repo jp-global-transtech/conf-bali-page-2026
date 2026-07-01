@@ -118,7 +118,7 @@
                     </svg>
                     <div>
                         <h4 class="font-display font-semibold text-forest mb-1">Official Resources</h4>
-                        <p class="font-sans text-earth/70 text-sm">Visit <a href="https://visa-indonesia.go.id/" target="_blank" class="text-forest underline">visa-indonesia.go.id</a> for official information</p>
+                        <p class="font-sans text-earth/70 text-sm">Visit <a href="https://evisa.imigrasi.go.id/" target="_blank" class="text-forest underline">evisa.imigrasi.go.id</a> for official information</p>
                     </div>
                 </div>
             </div>
