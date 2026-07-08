@@ -23,7 +23,7 @@
         {{-- Registration Options --}}
         <div class="grid md:grid-cols-2 gap-4 max-w-2xl mx-auto mb-8">
             {{-- Indonesia & International --}}
-            <a href="{{ config('conference.conf_ms_web_url') }}/register" target="_blank" class="bg-white rounded-xl p-6 hover:shadow-xl transition-all group">
+            <a href="{{ config('conference.conf_ms_web_url') }}/conference/register" target="_blank" class="bg-white rounded-xl p-6 hover:shadow-xl transition-all group">
                 <div class="flex items-center gap-3 mb-3">
                     <div class="w-10 h-10 bg-forest/10 rounded-lg flex items-center justify-center">
                         <svg class="w-5 h-5 text-forest" fill="none" stroke="currentColor" viewBox="0 0 24 24">

@@ -33,10 +33,10 @@ Route::prefix('conference')->name('conference.')->group(function () {
     Route::get('/call-for-abstract', [Bali2026Controller::class, 'callForAbstract'])->name('call-for-abstract');
     // Registration routes - Redirect to conf_ms_web
     Route::get('/registration', function () {
-        return redirect(config('public.registration.tally') . '/register');
+        return redirect(config('conference.conf_ms_web_url') . '/conference/registration');
     })->name('registration');
     Route::get('/register', function () {
-        return redirect(config('public.registration.tally') . '/register');
+        return redirect(config('conference.conf_ms_web_url') . '/conference/register');
     })->name('register');
     Route::get('/calendar', [Bali2026Controller::class, 'downloadCalendar'])->name('calendar');
 });

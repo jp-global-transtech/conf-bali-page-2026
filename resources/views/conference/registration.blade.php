@@ -79,7 +79,7 @@
                 </div>
 
                 {{-- CTA Button --}}
-                <a href="{{ config('conference.conf_ms_web_url') }}/register/form"
+                <a href="{{ config('conference.conf_ms_web_url') }}/conference/register"
                    class="inline-flex items-center gap-3 px-10 py-5 bg-forest text-white text-lg font-display font-semibold rounded-xl hover:bg-sage transition-all duration-300 hover:shadow-lg hover:shadow-sage/25 hover:-translate-y-0.5">
                     <span>Continue to Registration</span>
                     <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
@@ -88,7 +88,7 @@
                 </a>
 
                 <p class="text-sm text-gray-500 mt-6">
-                    You'll be redirected to <span class="font-mono text-xs bg-gray-100 px-2 py-1 rounded">{{ config('conference.conf_ms_web_url') }}/register/form</span>
+                    You'll be redirected to <span class="font-mono text-xs bg-gray-100 px-2 py-1 rounded">{{ config('conference.conf_ms_web_url') }}/conference/register</span>
                 </p>
             </div>
         </section>
