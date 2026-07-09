@@ -32,11 +32,13 @@ Route::prefix('conference')->name('conference.')->group(function () {
     Route::get('/contact', [Bali2026Controller::class, 'contact'])->name('contact');
     Route::get('/call-for-abstract', [Bali2026Controller::class, 'callForAbstract'])->name('call-for-abstract');
     // Registration routes - Redirect to conf_ms_web
+    // NOTE: conf_ms_web routes are defined at root level (e.g. /register, /registration)
+    //       NOT under a /conference prefix. These redirects now point to the correct paths.
     Route::get('/registration', function () {
-        return redirect(config('conference.conf_ms_web_url') . '/conference/registration');
+        return view('conference.registration');
     })->name('registration');
     Route::get('/register', function () {
-        return redirect(config('conference.conf_ms_web_url') . '/conference/register');
+        return redirect(config('conference.conf_ms_web_url') . '/register?conference=gets-conference-2026');
     })->name('register');
     Route::get('/calendar', [Bali2026Controller::class, 'downloadCalendar'])->name('calendar');
 });
