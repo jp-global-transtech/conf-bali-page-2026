@@ -56,7 +56,7 @@
                 <a href="{{ route('conference.call-for-abstract') }}" class="text-sm font-medium {{ request()->routeIs('conference.call-for-abstract') ? 'text-forest font-semibold' : 'text-gray-600 hover:text-forest' }} transition-colors">Call for Abstract</a>
 
                 {{-- Registration --}}
-                <a href="{{ route('conference.registration') }}" class="text-sm font-medium {{ request()->routeIs('conference.registration') ? 'text-forest font-semibold' : 'text-gray-600 hover:text-forest' }} transition-colors">{{ __('navigation.registration') }}</a>
+                <a href="{{ route('conference.register') }}" class="text-sm font-medium {{ request()->routeIs('conference.register') ? 'text-forest font-semibold' : 'text-gray-600 hover:text-forest' }} transition-colors">{{ __('navigation.registration') }}</a>
 
                 {{-- Contact --}}
                 <a href="{{ route('conference.contact') }}" class="text-sm font-medium {{ request()->routeIs('conference.contact') ? 'text-forest font-semibold' : 'text-gray-600 hover:text-forest' }} transition-colors">{{ __('navigation.contact') }}</a>
@@ -131,7 +131,7 @@
 
             {{-- Register CTA Button --}}
             <div class="hidden lg:flex items-center">
-                <a href="{{ route('conference.registration') }}" class="inline-flex items-center px-5 py-2.5 bg-forest text-white text-sm font-semibold rounded-lg hover:bg-forest-700 transition-colors">
+                <a href="{{ route('conference.register') }}" class="inline-flex items-center px-5 py-2.5 bg-forest text-white text-sm font-semibold rounded-lg hover:bg-forest-700 transition-colors">
                     <span>{{ __('conference.register_now') }}</span>
                 </a>
             </div>
@@ -193,7 +193,7 @@
             <a href="{{ route('conference.call-for-abstract') }}" @click="mobileOpen = false" class="block px-4 py-2 {{ request()->routeIs('conference.call-for-abstract') ? 'text-forest bg-gray-50 font-semibold' : 'text-gray-600' }} hover:bg-gray-50 rounded-lg">Call for Abstract</a>
 
             {{-- Registration --}}
-            <a href="{{ route('conference.registration') }}" @click="mobileOpen = false" class="block px-4 py-2 {{ request()->routeIs('conference.registration') ? 'text-forest bg-gray-50 font-semibold' : 'text-gray-600' }} hover:bg-gray-50 rounded-lg">{{ __('navigation.registration') }}</a>
+            <a href="{{ route('conference.register') }}" @click="mobileOpen = false" class="block px-4 py-2 {{ request()->routeIs('conference.register') ? 'text-forest bg-gray-50 font-semibold' : 'text-gray-600' }} hover:bg-gray-50 rounded-lg">{{ __('navigation.registration') }}</a>
 
             {{-- Contact --}}
             <a href="{{ route('conference.contact') }}" @click="mobileOpen = false" class="block px-4 py-2 {{ request()->routeIs('conference.contact') ? 'text-forest bg-gray-50 font-semibold' : 'text-gray-600' }} hover:bg-gray-50 rounded-lg">{{ __('navigation.contact') }}</a>
@@ -255,7 +255,7 @@
             </div> --}}
 
             {{-- Register CTA (Mobile) --}}
-            <a href="{{ route('conference.registration') }}" @click="mobileOpen = false" class="block w-full text-center mx-4 px-4 py-3 bg-forest text-white font-semibold rounded-lg">
+            <a href="{{ route('conference.register') }}" @click="mobileOpen = false" class="block w-full text-center mx-4 px-4 py-3 bg-forest text-white font-semibold rounded-lg">
                 {{ __('conference.register_now') }}
             </a>
 

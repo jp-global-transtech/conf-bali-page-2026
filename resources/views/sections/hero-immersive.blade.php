@@ -79,7 +79,7 @@
              x-init="setTimeout(() => visible = true, 100)">
 
             {{-- Primary CTA - Join as Participant --}}
-            <a href="{{ route('conference.registration') }}" class="inline-flex items-center gap-2 px-8 py-4 bg-forest text-white font-semibold rounded-lg hover:bg-forest-700 transition-all shadow-md hover:shadow-lg">
+            <a href="{{ route('conference.register') }}" class="inline-flex items-center gap-2 px-8 py-4 bg-forest text-white font-semibold rounded-lg hover:bg-forest-700 transition-all shadow-md hover:shadow-lg">
                 <span>Join as Participant</span>
                 <svg class="w-5 h-5" xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
                     <path d="M5 12h14" />

@@ -11,11 +11,6 @@ Route::get('/', [Bali2026Controller::class, 'index'])->name('conference.landing'
 // Language switcher
 Route::post('/language', [LanguageController::class, 'switch'])->name('language.switch');
 
-// Public Tally registration page
-Route::get('/register', function () {
-    return view('public.registration.tally');
-})->name('register');
-
 // Conference pages
 Route::prefix('conference')->name('conference.')->group(function () {
     Route::get('/overview', [Bali2026Controller::class, 'overview'])->name('overview');

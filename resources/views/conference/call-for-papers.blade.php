@@ -516,7 +516,7 @@
                     Join researchers, academics, and professionals from around the world by contributing your research to GETS 2026.
                 </p>
                 <div class="flex flex-col sm:flex-row gap-4 justify-center">
-                    <a href="{{ route('conference.registration') }}" class="inline-flex items-center justify-center gap-2 px-8 py-4 bg-sage text-forest font-display font-semibold rounded-lg hover:bg-white transition-all duration-300 hover:shadow-lg">
+                    <a href="{{ route('conference.register') }}" class="inline-flex items-center justify-center gap-2 px-8 py-4 bg-sage text-forest font-display font-semibold rounded-lg hover:bg-white transition-all duration-300 hover:shadow-lg">
                         <span>Submit Abstract / Register Now</span>
                         <svg class="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                             <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M17 8l4 4m0 0l-4 4m4-4H3" />

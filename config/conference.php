@@ -6,16 +6,14 @@ return [
     | Conference Management System URL
     |--------------------------------------------------------------------------
     |
-    | URL untuk aplikasi conf_ms_web yang menangani sistem registrasi
-    | konferensi. Aplikasi landing page akan redirect ke URL ini untuk
-    | proses registrasi.
+    | URL untuk sistem registrasi konferensi.
+    | Landing page akan redirect ke URL ini untuk proses registrasi.
     |
-    | Development: http://localhost:8001
-    | Production: https://conf-ms-web.gets-2026.com (or similar)
+    | Production: https://portal.jptranstech.org
     |
     */
 
-    'conf_ms_web_url' => env('CONF_MS_WEB_URL', 'http://localhost:8001'),
+    'conf_ms_web_url' => env('CONF_MS_WEB_URL', 'https://portal.jptranstech.org'),
 
     /*
     |--------------------------------------------------------------------------
