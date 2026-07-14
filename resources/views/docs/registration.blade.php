@@ -56,6 +56,7 @@
             <li><a href="#complete-profile" class="text-earth hover:text-forest flex items-center gap-2"><span class="w-1.5 h-1.5 bg-sage rounded-full"></span>Completing Your Profile</a></li>
             <li><a href="#registration-types" class="text-earth hover:text-forest flex items-center gap-2"><span class="w-1.5 h-1.5 bg-sage rounded-full"></span>Selecting Registration Type</a></li>
             <li><a href="#abstract" class="text-earth hover:text-forest flex items-center gap-2"><span class="w-1.5 h-1.5 bg-sage rounded-full"></span>Abstract Submission</a></li>
+            <li><a href="#indian-registration" class="text-earth hover:text-forest flex items-center gap-2"><span class="w-1.5 h-1.5 bg-sage rounded-full"></span>Indian Nationals Registration</a></li>
             <li><a href="#deadlines" class="text-earth hover:text-forest flex items-center gap-2"><span class="w-1.5 h-1.5 bg-sage rounded-full"></span>Registration Deadlines</a></li>
         </ul>
     </div>
@@ -162,49 +163,39 @@
             Step 2: Completing Your Profile
         </h2>
         <div class="bg-white rounded-xl p-6 border border-gray-200">
-            <div class="grid md:grid-cols-2 gap-6">
-                <div>
-                    <h4 class="font-semibold text-forest mb-3">Personal Information</h4>
-                    <div class="space-y-2 text-sm text-gray-700">
-                        <div class="flex justify-between py-2 border-b">
-                            <span>First Name</span>
-                            <span class="text-red-500">Required</span>
-                        </div>
-                        <div class="flex justify-between py-2 border-b">
-                            <span>Last Name</span>
-                            <span class="text-red-500">Required</span>
-                        </div>
-                        <div class="flex justify-between py-2 border-b">
-                            <span>Title (Dr./Prof./Mr./Ms.)</span>
-                            <span class="text-gray-400">Optional</span>
-                        </div>
-                        <div class="flex justify-between py-2 border-b">
-                            <span>Affiliation</span>
-                            <span class="text-red-500">Required</span>
-                        </div>
-                        <div class="flex justify-between py-2">
-                            <span>Country</span>
-                            <span class="text-red-500">Required</span>
-                        </div>
-                    </div>
+            <p class="text-sm text-gray-600 mb-4">Fill in your personal and institutional details as they appear in the registration form.</p>
+            <div class="space-y-2 text-sm text-gray-700">
+                <div class="flex justify-between py-2 border-b">
+                    <span>First Name</span>
+                    <span class="text-red-500">Required</span>
                 </div>
-                <div>
-                    <h4 class="font-semibold text-forest mb-3">Professional Details</h4>
-                    <div class="space-y-2 text-sm text-gray-700">
-                        <div class="flex justify-between py-2 border-b">
-                            <span>Department/Division</span>
-                            <span class="text-gray-400">Optional</span>
-                        </div>
-                        <div class="flex justify-between py-2 border-b">
-                            <span>Field of Research</span>
-                            <span class="text-gray-400">Optional</span>
-                        </div>
-                        <div class="flex justify-between py-2">
-                            <span>ORCID ID</span>
-                            <span class="text-gray-400">Optional</span>
-                        </div>
-                    </div>
+                <div class="flex justify-between py-2 border-b">
+                    <span>Last Name</span>
+                    <span class="text-red-500">Required</span>
                 </div>
+                <div class="flex justify-between py-2 border-b">
+                    <span>Email Address</span>
+                    <span class="text-red-500">Required</span>
+                </div>
+                <div class="flex justify-between py-2 border-b">
+                    <span>Phone Number</span>
+                    <span class="text-gray-400">Optional</span>
+                </div>
+                <div class="flex justify-between py-2 border-b">
+                    <span>Country</span>
+                    <span class="text-red-500">Required</span>
+                </div>
+                <div class="flex justify-between py-2 border-b">
+                    <span>Institution Name</span>
+                    <span class="text-red-500">Required</span>
+                </div>
+                <div class="flex justify-between py-2">
+                    <span>Position / Title</span>
+                    <span class="text-red-500">Required</span>
+                </div>
+            </div>
+            <div class="bg-ivory rounded-lg p-4 mt-4 text-xs text-gray-600">
+                <p><strong>Note:</strong> After completing your profile, you'll proceed to select a Registration Category (Early Bird / Regular / Student) and Attendance Type (Onsite / Online) in the next step.</p>
             </div>
         </div>
     </section>
@@ -217,7 +208,7 @@
             </svg>
             Step 3: Selecting Registration Type
         </h2>
-        <div class="grid md:grid-cols-2 gap-4">
+        <div class="grid md:grid-cols-3 gap-4">
             <div class="bg-white rounded-xl p-6 border border-gray-200 hover:border-forest/30 transition-colors">
                 <div class="flex items-center gap-3 mb-3">
                     <div class="w-10 h-10 bg-forest/10 rounded-lg flex items-center justify-center">
@@ -226,11 +217,12 @@
                         </svg>
                     </div>
                     <div>
-                        <h3 class="font-semibold text-forest">Student</h3>
-                        <p class="text-sm text-gray-500">Announce Soon</p>
+                        <h3 class="font-semibold text-forest">Early Bird</h3>
+                        <p class="text-sm text-gray-500">Until June 15, 2026</p>
                     </div>
                 </div>
-                <p class="text-sm text-gray-600 mb-3">Discounted rate for full-time students. Valid student ID required.</p>
+                <p class="text-2xl font-display font-bold text-forest mb-1">USD 150</p>
+                <p class="text-sm text-gray-600">Full conference access at the lowest rate. Available for a limited time only.</p>
             </div>
             <div class="bg-white rounded-xl p-6 border border-gray-200 hover:border-forest/30 transition-colors">
                 <div class="flex items-center gap-3 mb-3">
@@ -240,39 +232,27 @@
                         </svg>
                     </div>
                     <div>
-                        <h3 class="font-semibold text-forest">Academic</h3>
-                        <p class="text-sm text-gray-500">Announce Soon</p>
+                        <h3 class="font-semibold text-forest">Regular</h3>
+                        <p class="text-sm text-gray-500">After June 15, 2026</p>
                     </div>
                 </div>
-                <p class="text-sm text-gray-600 mb-3">For faculty, researchers, and postdocs. Full conference access.</p>
+                <p class="text-2xl font-display font-bold text-forest mb-1">USD 200</p>
+                <p class="text-sm text-gray-600">Standard registration rate for all participants. Full conference access.</p>
             </div>
             <div class="bg-white rounded-xl p-6 border border-gray-200 hover:border-forest/30 transition-colors">
                 <div class="flex items-center gap-3 mb-3">
                     <div class="w-10 h-10 bg-atmosphere/10 rounded-lg flex items-center justify-center">
                         <svg class="w-5 h-5 text-atmosphere" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M21 13.255A23.931 23.931 0 0112 15c-3.183 0-6.22-.62-9-1.745M16 6V4a2 2 0 00-2-2h-4a2 2 0 00-2 2v2m4 6h.01M5 20h14a2 2 0 002-2V8a2 2 0 00-2-2H5a2 2 0 00-2 2v10a2 2 0 002 2z" />
+                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 6.253v13m0-13C10.832 5.477 9.246 5 7.5 5S4.168 5.477 3 6.253v13C4.168 18.477 5.754 18 7.5 18s3.332.477 4.5 1.253m0-13C13.168 5.477 14.754 5 16.5 5c1.747 0 3.332.477 4.5 1.253v13C19.832 18.477 18.247 18 16.5 18c-1.746 0-3.332.477-4.5 1.253" />
                         </svg>
                     </div>
                     <div>
-                        <h3 class="font-semibold text-forest">Industry</h3>
-                        <p class="text-sm text-gray-500">Announce Soon</p>
+                        <h3 class="font-semibold text-forest">Student</h3>
+                        <p class="text-sm text-gray-500">Valid ID Required</p>
                     </div>
                 </div>
-                <p class="text-sm text-gray-600 mb-3">For private sector and corporate participants. Networking opportunities.</p>
-            </div>
-            <div class="bg-white rounded-xl p-6 border border-gray-200 hover:border-forest/30 transition-colors">
-                <div class="flex items-center gap-3 mb-3">
-                    <div class="w-10 h-10 bg-tech/10 rounded-lg flex items-center justify-center">
-                        <svg class="w-5 h-5 text-tech" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M15 10l4.553-2.276A1 1 0 0121 8.618v6.764a1 1 0 01-1.447.894L15 14M5 18h8a2 2 0 002-2V8a2 2 0 00-2-2H5a2 2 0 00-2 2v8a2 2 0 002 2z" />
-                        </svg>
-                    </div>
-                    <div>
-                        <h3 class="font-semibold text-forest">Virtual</h3>
-                        <p class="text-sm text-gray-500">Announce Soon</p>
-                    </div>
-                </div>
-                <p class="text-sm text-gray-600 mb-3">Online-only participation. Live stream access and digital proceedings.</p>
+                <p class="text-2xl font-display font-bold text-forest mb-1">USD 75</p>
+                <p class="text-sm text-gray-600">Discounted rate for full-time students. Valid Student ID required upon upload.</p>
             </div>
         </div>
     </section>
@@ -366,39 +346,110 @@
             </svg>
             Registration Deadlines
         </h2>
+
+        <div class="grid md:grid-cols-2 gap-6 mb-6">
+            {{-- Indian Delegates Timeline --}}
+            <div class="bg-white rounded-xl p-6 border border-gray-200">
+                <div class="flex items-center gap-2 mb-4">
+                    <span class="w-3 h-3 rounded-full bg-sage"></span>
+                    <h3 class="font-semibold text-forest">Indian Delegates Timeline</h3>
+                </div>
+                <div class="space-y-4">
+                    <div class="flex items-start gap-3">
+                        <div class="w-10 h-10 rounded-full bg-sage/10 flex items-center justify-center flex-shrink-0">
+                            <svg class="w-5 h-5 text-sage" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 5H7a2 2 0 00-2 2v12a2 2 0 002 2h10a2 2 0 002-2V7a2 2 0 00-2-2h-2M9 5a2 2 0 002 2h2a2 2 0 002-2M9 5a2 2 0 012-2h2a2 2 0 012 2" />
+                            </svg>
+                        </div>
+                        <div>
+                            <p class="font-semibold text-forest">July 15, 2026</p>
+                            <p class="text-sm text-gray-600">Last Abstract Submission Deadline for Indian Delegates</p>
+                        </div>
+                    </div>
+                    <div class="flex items-start gap-3">
+                        <div class="w-10 h-10 rounded-full bg-sage/10 flex items-center justify-center flex-shrink-0">
+                            <svg class="w-5 h-5 text-sage" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M17 9V7a2 2 0 00-2-2H5a2 2 0 00-2 2v6a2 2 0 002 2h2m2 4h10a2 2 0 002-2v-6a2 2 0 00-2-2H9a2 2 0 00-2 2v6a2 2 0 002 2zm7-5a2 2 0 11-4 0 2 2 0 014 0z" />
+                            </svg>
+                        </div>
+                        <div>
+                            <p class="font-semibold text-forest">July 25, 2026</p>
+                            <p class="text-sm text-gray-600">Last Registration &amp; Payment Deadline for Indian Delegates</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            {{-- Indonesian & General International Timeline --}}
+            <div class="bg-white rounded-xl p-6 border border-gray-200">
+                <div class="flex items-center gap-2 mb-4">
+                    <span class="w-3 h-3 rounded-full bg-atmosphere"></span>
+                    <h3 class="font-semibold text-forest">Indonesian &amp; General International Timeline</h3>
+                </div>
+                <div class="space-y-4">
+                    <div class="flex items-start gap-3">
+                        <div class="w-10 h-10 rounded-full bg-atmosphere/10 flex items-center justify-center flex-shrink-0">
+                            <svg class="w-5 h-5 text-atmosphere" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 5H7a2 2 0 00-2 2v12a2 2 0 002 2h10a2 2 0 002-2V7a2 2 0 00-2-2h-2M9 5a2 2 0 002 2h2a2 2 0 002-2M9 5a2 2 0 012-2h2a2 2 0 012 2" />
+                            </svg>
+                        </div>
+                        <div>
+                            <p class="font-semibold text-forest">August 3, 2026</p>
+                            <p class="text-sm text-gray-600">Final Deadline to email Presentation Slides / Poster Files to info@jptrantech.org</p>
+                        </div>
+                    </div>
+                    <div class="flex items-start gap-3">
+                        <div class="w-10 h-10 rounded-full bg-atmosphere/10 flex items-center justify-center flex-shrink-0">
+                            <svg class="w-5 h-5 text-atmosphere" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 5H7a2 2 0 00-2 2v12a2 2 0 002 2h10a2 2 0 002-2V7a2 2 0 00-2-2h-2M9 5a2 2 0 002 2h2a2 2 0 002-2M9 5a2 2 0 012-2h2a2 2 0 012 2" />
+                            </svg>
+                        </div>
+                        <div>
+                            <p class="font-semibold text-forest">August 10, 2026</p>
+                            <p class="text-sm text-gray-600">Last Abstract Submission Deadline for Indonesia &amp; General International participants</p>
+                        </div>
+                    </div>
+                    <div class="flex items-start gap-3">
+                        <div class="w-10 h-10 rounded-full bg-atmosphere/10 flex items-center justify-center flex-shrink-0">
+                            <svg class="w-5 h-5 text-atmosphere" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M17 9V7a2 2 0 00-2-2H5a2 2 0 00-2 2v6a2 2 0 002 2h2m2 4h10a2 2 0 002-2v-6a2 2 0 00-2-2H9a2 2 0 00-2 2v6a2 2 0 002 2zm7-5a2 2 0 11-4 0 2 2 0 014 0z" />
+                            </svg>
+                        </div>
+                        <div>
+                            <p class="font-semibold text-forest">August 23, 2026</p>
+                            <p class="text-sm text-gray-600">Last Registration &amp; Payment Deadline for Indonesia &amp; General International participants</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        {{-- Summit Days --}}
         <div class="bg-white rounded-xl p-6 border border-gray-200">
-            <div class="overflow-x-auto">
-                <table class="w-full">
-                    <thead>
-                        <tr class="border-b">
-                            <th class="text-left py-3 px-4 font-semibold text-gray-700">Deadline</th>
-                            <th class="text-left py-3 px-4 font-semibold text-gray-700">Date</th>
-                            <th class="text-left py-3 px-4 font-semibold text-gray-700">Notes</th>
-                        </tr>
-                    </thead>
-                    <tbody>
-                        <tr class="border-b">
-                            <td class="py-3 px-4 text-gray-700">Early Bird</td>
-                            <td class="py-3 px-4 text-forest font-semibold">May 31, 2026</td>
-                            <td class="py-3 px-4 text-gray-600">Lowest rates</td>
-                        </tr>
-                        <tr class="border-b">
-                            <td class="py-3 px-4 text-gray-700">Abstract Submission</td>
-                            <td class="py-3 px-4 text-forest font-semibold">July 15, 2026</td>
-                            <td class="py-3 px-4 text-gray-600">For consideration</td>
-                        </tr>
-                        <tr class="border-b">
-                            <td class="py-3 px-4 text-gray-700">Regular Registration</td>
-                            <td class="py-3 px-4 text-gray-600">July 1 - August 15, 2026</td>
-                            <td class="py-3 px-4 text-gray-600">Standard rates</td>
-                        </tr>
-                        <tr>
-                            <td class="py-3 px-4 text-gray-700">On-Site Registration</td>
-                            <td class="py-3 px-4 text-gray-600">August 24-26, 2026</td>
-                            <td class="py-3 px-4 text-gray-600">Highest rates</td>
-                        </tr>
-                    </tbody>
-                </table>
+            <div class="flex items-center gap-2 mb-4">
+                <span class="w-3 h-3 rounded-full bg-forest"></span>
+                <h3 class="font-semibold text-forest">Summit Days</h3>
+            </div>
+            <div class="grid md:grid-cols-2 gap-4">
+                <div class="bg-gradient-to-br from-forest/5 to-sage/5 rounded-lg p-5 border border-forest/10">
+                    <div class="flex items-center gap-3 mb-2">
+                        <svg class="w-5 h-5 text-forest" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M8 7V3m8 4V3m-9 8h10M5 21h14a2 2 0 002-2V7a2 2 0 00-2-2H5a2 2 0 00-2 2v12a2 2 0 002 2z" />
+                        </svg>
+                        <p class="font-semibold text-forest">August 24, 2026</p>
+                    </div>
+                    <p class="text-sm text-gray-600">Conference Day &ndash; Summit Plenary &amp; Parallel Sessions at Universitas Udayana (08:00 - 17:10 WITA).</p>
+                </div>
+                <div class="bg-gradient-to-br from-atmosphere/5 to-sage/5 rounded-lg p-5 border border-atmosphere/10">
+                    <div class="flex items-center gap-3 mb-2">
+                        <svg class="w-5 h-5 text-atmosphere" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M17.657 16.657L13.414 20.9a1.998 1.998 0 01-2.827 0l-4.244-4.243a8 8 0 1111.314 0z" />
+                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M15 11a3 3 0 11-6 0 3 3 0 016 0z" />
+                        </svg>
+                        <p class="font-semibold text-forest">August 25, 2026</p>
+                    </div>
+                    <p class="text-sm text-gray-600">Special Program &ndash; Learning Visit to su-re.co.</p>
+                </div>
             </div>
         </div>
     </section>
