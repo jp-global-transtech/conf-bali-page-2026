@@ -11,6 +11,17 @@
 
         <title>{{ isset($title) ? $title . ' - ' : '' }}{{ config('app.name', 'GETS 2026') }}</title>
 
+        {{-- SEO Meta Tags --}}
+        @php
+            $seoTitle = trim($__env->yieldContent('title'));
+            if ($seoTitle) {
+                SEO::setTitle($seoTitle);
+            }
+            SEO::opengraph()->addImage(asset('logo-gets-2026.png'));
+            SEO::jsonLd()->setImage(asset('logo-gets-2026.png'));
+        @endphp
+        {!! SEO::generate() !!}
+
         {{-- Fonts --}}
         <link rel="preconnect" href="https://fonts.bunny.net">
         <link href="https://fonts.bunny.net/css?family=instrument-sans:ital,wght@0,400;0,500;0,600;0,700;1,400&display=swap" rel="stylesheet" />
@@ -38,17 +49,7 @@
         {{-- Scripts --}}
         @stack('scripts')
 
-        {{-- Tawk.to Live Chat --}}
-        <script type="text/javascript">
-        var Tawk_API=Tawk_API||{}, Tawk_LoadStart=new Date();
-        (function(){
-        var s1=document.createElement("script"),s0=document.getElementsByTagName("script")[0];
-        s1.async=true;
-        s1.src='https://embed.tawk.to/6a2b9869b5141b1c32c0b7fd/1jqt4mv1l';
-        s1.charset='UTF-8';
-        s1.setAttribute('crossorigin','*');
-        s0.parentNode.insertBefore(s1,s0);
-        })();
-        </script>
+        {{-- WhatsApp Widget --}}
+        <x-whatsapp-widget />
     </body>
 </html>

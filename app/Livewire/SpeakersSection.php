@@ -17,11 +17,14 @@ class SpeakersSection extends Component
     #[Locked]
     public ?array $modalSpeaker = null;
 
-    // Include both confirmed and unconfirmed speakers
+    // Only show speakers with photos available
     #[Computed]
     public function speakers(): array
     {
-        return collect(include resource_path('data/speakers.php'))->all();
+        return collect(include resource_path('data/speakers.php'))
+            ->filter(fn($s) => $s['photo'] !== null)
+            ->values()
+            ->all();
     }
 
     #[Computed]

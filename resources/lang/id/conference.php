@@ -29,4 +29,7 @@ return [
     'register_now' => 'Daftar Sekarang',
     'explore_themes' => 'Jelajahi Tema',
     'view_all_speakers' => 'Lihat Semua Pembicara',
+
+    // WhatsApp Widget
+    'chat_with_us' => 'Butuh bantuan? Tanya kami via WhatsApp',
 ];

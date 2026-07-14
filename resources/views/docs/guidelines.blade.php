@@ -44,8 +44,6 @@
         </h2>
         <div class="bg-white rounded-xl p-6 border border-gray-200">
             <p class="text-gray-700 mb-4">The <strong>Global Environment & Transition Summit 2026 (GETS 2026)</strong> brings together scholars, policymakers, industry leaders, and environmental experts to address pressing climate challenges through interdisciplinary collaboration.</p>
-            <p class="text-gray-700 mb-6">This summit integrates the <strong>5th ICePTi & 6th PIPS</strong> joint conferences, offering a rich platform for knowledge exchange across multiple disciplines.</p>
-
             <div class="grid md:grid-cols-2 lg:grid-cols-3 gap-4">
                 <div class="bg-forest/5 rounded-lg p-4">
                     <p class="text-sm text-gray-500 mb-1">Conference Day</p>
@@ -62,10 +60,6 @@
                 <div class="bg-sage/5 rounded-lg p-4">
                     <p class="text-sm text-gray-500 mb-1">Format</p>
                     <p class="font-semibold text-forest">On-site & Virtual (Hybrid)</p>
-                </div>
-                <div class="bg-atmosphere/5 rounded-lg p-4 lg:col-span-1">
-                    <p class="text-sm text-gray-500 mb-1">Joint Events</p>
-                    <p class="font-semibold text-forest">5th ICePTi & 6th PIPS</p>
                 </div>
             </div>
         </div>

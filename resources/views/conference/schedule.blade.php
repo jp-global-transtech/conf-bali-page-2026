@@ -1,6 +1,6 @@
 @extends('layouts.conference')
 
-@section('title', 'Conference Schedule | GETS 2026')
+@section('title', 'Program Schedule | GETS 2026')
 
 @section('content')
 <div class="min-h-screen bg-gradient-to-b from-forest/5 to-white pt-20">
@@ -11,257 +11,367 @@
 
         <div class="relative max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-16 md:py-20">
             <div class="text-center">
-                <span class="inline-block px-4 py-1.5 bg-white/20 backdrop-blur-sm rounded-full text-white/90 text-sm font-medium mb-4">
-                    Program Schedule
+                <span class="inline-block px-4 py-1.5 bg-amber-400/20 backdrop-blur-sm rounded-full text-amber-300 text-sm font-medium mb-4">
+                    Tentative Rundown
                 </span>
                 <h1 class="text-2xl md:text-3xl lg:text-4xl font-display font-bold text-white mb-4">
-                    Conference Schedule
+                    Conference Program
                 </h1>
-                <p class="text-xl text-white/90 max-w-3xl mx-auto leading-relaxed">
-                    24 August 2026 | Faculty of Mathematics and Natural Sciences (FMIPA), Udayana University, Bali
+                <p class="text-lg text-white/90 max-w-3xl mx-auto leading-relaxed">
+                    24 August 2026 | Lecture Building, Universitas Udayana, Bali
                 </p>
             </div>
         </div>
     </div>
 
-    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-16">
+    <div class="max-w-5xl mx-auto px-4 sm:px-6 lg:px-8 py-12">
 
-        {{-- Morning Sessions --}}
-        <div class="mb-12">
-            <h2 class="text-2xl font-display font-bold text-forest mb-6 flex items-center gap-3">
-                <span class="w-10 h-10 rounded-full bg-gradient-to-br from-forest to-sage flex items-center justify-center text-white text-lg">🌅</span>
-                Morning Sessions
-            </h2>
-
-            <div class="space-y-4">
-                {{-- Registration --}}
-                <div class="bg-white rounded-xl border border-forest/10 p-6 border-l-4 border-l-forest hover:shadow-lg transition-shadow">
-                    <div class="flex flex-col sm:flex-row sm:items-center gap-4">
-                        <div class="flex-shrink-0 w-32 text-sm font-semibold text-atmosphere">08:00 - 09:00</div>
-                        <div class="flex-1">
-                            <span class="inline-block px-2 py-1 text-xs uppercase rounded-full bg-forest/10 text-forest mb-2">Registration</span>
-                            <h3 class="text-lg font-semibold text-forest">Registration & Welcome Coffee</h3>
-                            <p class="text-sm text-earth/70">Participant registration and networking over welcome coffee</p>
-                        </div>
+        {{-- Tentative Notice Banner --}}
+        <div class="mb-10">
+            <div class="bg-amber-50 border-2 border-amber-300 rounded-2xl p-5 md:p-6">
+                <div class="flex items-start gap-4">
+                    <div class="w-10 h-10 bg-amber-500 rounded-xl flex items-center justify-center flex-shrink-0 mt-0.5">
+                        <svg class="w-5 h-5 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 9v2m0 4h.01m-6.938 4h13.856c1.54 0 2.502-1.667 1.732-2.5L13.732 4c-.77-.833-1.964-.833-2.732 0L4.082 16.5c-.77.833.192 2.5 1.732 2.5z" />
+                        </svg>
                     </div>
-                </div>
-
-                {{-- Opening Ceremony --}}
-                <div class="bg-white rounded-xl border border-forest/10 p-6 border-l-4 border-l-forest hover:shadow-lg transition-shadow">
-                    <div class="flex flex-col sm:flex-row sm:items-center gap-4">
-                        <div class="flex-shrink-0 w-32 text-sm font-semibold text-atmosphere">09:00 - 09:30</div>
-                        <div class="flex-1">
-                            <span class="inline-block px-2 py-1 text-xs uppercase rounded-full bg-forest/10 text-forest mb-2">Opening</span>
-                            <h3 class="text-lg font-semibold text-forest">Opening Ceremony</h3>
-                            <p class="text-sm text-earth/70">Welcome remarks by Chief Patrons and distinguished guests</p>
-                        </div>
-                    </div>
-                </div>
-
-                {{-- Keynote Sessions - Indonesia Delegation --}}
-                <div class="bg-gradient-to-r from-forest/5 to-sage/5 rounded-xl border border-forest/10 p-6">
-                    <div class="flex items-center gap-2 mb-4">
-                        <span class="text-2xl">🇮🇩</span>
-                        <h4 class="font-display font-semibold text-forest">Keynote Sessions: Indonesia Delegation</h4>
-                        <span class="text-xs text-earth/60">(Future Tech & Applied Sciences)</span>
-                    </div>
-
-                    <div class="space-y-3">
-                        <div class="bg-white rounded-lg p-4 border-l-2 border-sage">
-                            <div class="flex flex-col sm:flex-row sm:items-center gap-3">
-                                <div class="flex-shrink-0 text-sm font-semibold text-atmosphere">09:30 - 09:45</div>
-                                <div class="flex-1">
-                                    <h5 class="font-semibold text-forest text-sm">Prof. Dr. Rupiasih</h5>
-                                    <p class="text-xs text-earth/70">The Role of Applied Physics in Advancing Sustainable Development Goals</p>
-                                </div>
-                            </div>
-                        </div>
-
-                        <div class="bg-white rounded-lg p-4 border-l-2 border-sage">
-                            <div class="flex flex-col sm:flex-row sm:items-center gap-3">
-                                <div class="flex-shrink-0 text-sm font-semibold text-atmosphere">09:45 - 10:00</div>
-                                <div class="flex-1">
-                                    <h5 class="font-semibold text-forest text-sm">Prof. Dr.Eng. I Made Joni</h5>
-                                    <p class="text-xs text-earth/70">Decarbonizing the Value Chain through Smart Nanotechnology</p>
-                                </div>
-                            </div>
-                        </div>
-
-                        <div class="bg-white rounded-lg p-4 border-l-2 border-sage">
-                            <div class="flex flex-col sm:flex-row sm:items-center gap-3">
-                                <div class="flex-shrink-0 text-sm font-semibold text-atmosphere">10:00 - 10:15</div>
-                                <div class="flex-1">
-                                    <h5 class="font-semibold text-forest text-sm">Prof. Dr.Eng. I Made Sucipta</h5>
-                                    <p class="text-xs text-earth/70">Hydrogen Technology as the Backbone for Climate-Resilient Infrastructure</p>
-                                </div>
-                            </div>
-                        </div>
-
-                        <div class="bg-white rounded-lg p-4 border-l-2 border-sage">
-                            <div class="flex flex-col sm:flex-row sm:items-center gap-3">
-                                <div class="flex-shrink-0 text-sm font-semibold text-atmosphere">10:15 - 10:30</div>
-                                <div class="flex-1">
-                                    <h5 class="font-semibold text-forest text-sm">Dr. Wayan Nata</h5>
-                                    <p class="text-xs text-earth/70">Innovative Heat Management Systems for Sustainable Industrial Practices</p>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-
-                {{-- Morning Tea Break --}}
-                <div class="bg-ivory rounded-xl border border-earth/20 p-6 border-l-4 border-l-earth/30">
-                    <div class="flex flex-col sm:flex-row sm:items-center gap-4">
-                        <div class="flex-shrink-0 w-32 text-sm font-semibold text-atmosphere">10:30 - 11:00</div>
-                        <div class="flex-1">
-                            <span class="inline-block px-2 py-1 text-xs uppercase rounded-full bg-earth/10 text-earth mb-2">Break</span>
-                            <h3 class="text-lg font-semibold text-forest">Morning Tea Break</h3>
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </div>
-
-        {{-- Keynote Sessions - India Delegation --}}
-        <div class="mb-12">
-            <h2 class="text-2xl font-display font-bold text-forest mb-6 flex items-center gap-3">
-                <span class="w-10 h-10 rounded-full bg-gradient-to-br from-atmosphere to-sage flex items-center justify-center text-white text-lg">☀️</span>
-                Mid-Day Sessions
-            </h2>
-
-            <div class="bg-gradient-to-r from-atmosphere/5 to-sage/5 rounded-xl border border-atmosphere/10 p-6">
-                <div class="flex items-center gap-2 mb-4">
-                    <span class="text-2xl">🇮🇳</span>
-                    <h4 class="font-display font-semibold text-forest">Keynote Sessions: India Delegation</h4>
-                    <span class="text-xs text-earth/60">(Business, Society & Policy)</span>
-                </div>
-
-                <div class="space-y-3">
-                    <div class="bg-white rounded-lg p-4 border-l-2 border-atmosphere">
-                        <div class="flex flex-col sm:flex-row sm:items-center gap-3">
-                            <div class="flex-shrink-0 text-sm font-semibold text-atmosphere">11:00 - 11:15</div>
-                            <div class="flex-1">
-                                <h5 class="font-semibold text-forest text-sm">Prof. J. U. Ahmed</h5>
-                                <p class="text-xs text-earth/70">Climate Resilience in Designing Business Models & Corporate Governance</p>
-                            </div>
-                        </div>
-                    </div>
-
-                    <div class="bg-white rounded-lg p-4 border-l-2 border-atmosphere">
-                        <div class="flex flex-col sm:flex-row sm:items-center gap-3">
-                            <div class="flex-shrink-0 text-sm font-semibold text-atmosphere">11:15 - 11:30</div>
-                            <div class="flex-1">
-                                <h5 class="font-semibold text-forest text-sm">Prof. L. S. Sharma</h5>
-                                <p class="text-xs text-earth/70">Green Finance, Investment Innovation, and Sustainable Tourism</p>
-                            </div>
-                        </div>
-                    </div>
-
-                    <div class="bg-white rounded-lg p-4 border-l-2 border-atmosphere">
-                        <div class="flex flex-col sm:flex-row sm:items-center gap-3">
-                            <div class="flex-shrink-0 text-sm font-semibold text-atmosphere">11:30 - 11:45</div>
-                            <div class="flex-1">
-                                <h5 class="font-semibold text-forest text-sm">Shri M. Priyananda Sharma</h5>
-                                <p class="text-xs text-earth/70">Community-led Climate Resilience in Global South: Integrating Indigenous Knowledge, Innovation and Sustainable Development</p>
-                            </div>
-                        </div>
-                    </div>
-
-                    <div class="bg-white rounded-lg p-4 border-l-2 border-atmosphere">
-                        <div class="flex flex-col sm:flex-row sm:items-center gap-3">
-                            <div class="flex-shrink-0 text-sm font-semibold text-atmosphere">11:45 - 12:00</div>
-                            <div class="flex-1">
-                                <h5 class="font-semibold text-forest text-sm">Dr. Goutam Jha</h5>
-                                <p class="text-xs text-earth/70">Policy, Regulation, and Global Cooperation: Cultural Perspectives on Climate Action</p>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </div>
-
-        {{-- Lunch Break --}}
-        <div class="mb-12">
-            <div class="bg-ivory rounded-xl border border-earth/20 p-6 border-l-4 border-l-earth/30">
-                <div class="flex flex-col sm:flex-row sm:items-center gap-4">
-                    <div class="flex-shrink-0 w-32 text-sm font-semibold text-atmosphere">12:00 - 13:00</div>
                     <div class="flex-1">
-                        <span class="inline-block px-2 py-1 text-xs uppercase rounded-full bg-earth/10 text-earth mb-2">Break</span>
-                        <h3 class="text-lg font-semibold text-forest">Lunch Break & Networking</h3>
-                        <p class="text-sm text-earth/70">Catered lunch with networking opportunities</p>
+                        <h2 class="text-lg font-bold text-amber-800 mb-1">Tentative Program</h2>
+                        <p class="text-sm text-amber-700 leading-relaxed">
+                            This rundown is <strong>tentative</strong> and subject to change. Times remain as originally scheduled; speaker assignments to each plenary/oral-presentation slot (KS-1–KS-8 and Sessions 1–6) are to be finalized.
+                        </p>
                     </div>
                 </div>
             </div>
         </div>
 
-        {{-- Afternoon Parallel Sessions (3 Tracks) --}}
-        @php
-            $parallelTracks = config('conference.parallel_tracks', []);
-        @endphp
+        {{-- Schedule Table --}}
+        <div class="bg-white rounded-2xl shadow-lg border border-gray-200 overflow-hidden">
+            {{-- Table Header --}}
+            <div class="bg-gradient-to-r from-forest to-sage px-6 py-5 text-center">
+                <h2 class="text-xl font-bold text-white">GETS 2026 — Tentative Rundown</h2>
+                <p class="text-white/80 text-sm mt-1">International Conference · Lecture Building, Universitas Udayana</p>
+            </div>
 
-        <div class="mb-12">
-            <h2 class="text-2xl font-display font-bold text-forest mb-6 flex items-center gap-3">
-                <span class="w-10 h-10 rounded-full bg-gradient-to-br from-atmosphere to-forest flex items-center justify-center text-white text-lg">🌤️</span>
-                Afternoon Parallel Sessions
-            </h2>
+            <div class="overflow-x-auto">
+                <table class="w-full text-sm">
+                    {{-- Column Headers --}}
+                    <thead>
+                        <tr class="bg-gray-50 border-b border-gray-200">
+                            <th class="text-left px-6 py-3 font-semibold text-gray-700 w-44">Time</th>
+                            <th class="text-left px-6 py-3 font-semibold text-gray-700">Program</th>
+                        </tr>
+                    </thead>
+                    <tbody class="divide-y divide-gray-100">
 
-            <p class="text-earth mb-8">Choose from three dynamic tracks featuring invited industry practitioners, policymakers, and academics.</p>
+                        {{-- ═════════════════════════════════════════════════
+                             VENUE HEADER
+                             ═════════════════════════════════════════════════ --}}
+                        <tr class="bg-forest/5">
+                            <td colspan="2" class="px-6 py-3">
+                                <span class="inline-flex items-center gap-2 text-xs font-bold text-forest uppercase tracking-wider">
+                                    <svg class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M17.657 16.657L13.414 20.9a1.998 1.998 0 01-2.827 0l-4.244-4.243a8 8 0 1111.314 0z" />
+                                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M15 11a3 3 0 11-6 0 3 3 0 016 0z" />
+                                    </svg>
+                                    Venue: Lecture Building, Universitas Udayana
+                                </span>
+                            </td>
+                        </tr>
 
-            <div class="grid lg:grid-cols-3 gap-6">
-                @foreach($parallelTracks as $track)
-                <div class="bg-white rounded-2xl shadow-lg hover:shadow-xl transition-all duration-300 overflow-hidden border border-forest/10">
-                    <div class="p-6">
-                        {{-- Track Badge --}}
-                        <div class="inline-block px-3 py-1 rounded-full text-xs font-semibold mb-4
-                            @if($track['focus'] === 'business-society') bg-atmosphere/10 text-atmosphere
-                            @elseif($track['focus'] === 'future-tech') bg-forest/10 text-forest
-                            @else bg-sage/10 text-sage @endif">
-                            {{ $track['id'] }}
-                        </div>
+                        {{-- Registration --}}
+                        <tr class="hover:bg-gray-50/50 transition-colors">
+                            <td class="px-6 py-3.5"><span class="font-semibold text-gray-800">07:30 – 08:00</span></td>
+                            <td class="px-6 py-3.5 text-gray-700">Registration</td>
+                        </tr>
 
-                        <h3 class="text-lg font-display font-bold text-forest mb-2">{{ $track['name'] }}</h3>
-                        <p class="text-sm text-earth/70 mb-4">{{ $track['description'] }}</p>
+                        {{-- Conference Opening --}}
+                        <tr class="hover:bg-gray-50/50 transition-colors">
+                            <td class="px-6 py-3.5"><span class="font-semibold text-gray-800">08:00 – 08:05</span></td>
+                            <td class="px-6 py-3.5 text-gray-700">Conference Opening</td>
+                        </tr>
 
-                        <ul class="space-y-2">
-                            @foreach($track['topics'] as $topic)
-                            <li class="flex items-start gap-2 text-sm text-earth">
-                                <svg class="w-4 h-4 text-sage flex-shrink-0 mt-0.5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 12l2 2 4-4m6 2a9 9 0 11-18 0 9 9 0 0118 0z" />
-                                </svg>
-                                <span>{{ $topic }}</span>
-                            </li>
-                            @endforeach
-                        </ul>
-                    </div>
-                    <div class="bg-ivory/50 px-6 py-3 border-t border-forest/10">
-                        <p class="text-xs text-atmosphere font-semibold">13:00 - 15:30 | Onsite in Bali</p>
-                    </div>
+                        {{-- Indonesia National Anthem --}}
+                        <tr class="hover:bg-gray-50/50 transition-colors">
+                            <td class="px-6 py-3.5"><span class="font-semibold text-gray-800">08:05 – 08:10</span></td>
+                            <td class="px-6 py-3.5 text-gray-700">Indonesia National Anthem</td>
+                        </tr>
+
+                        {{-- Moment of Reflection --}}
+                        <tr class="hover:bg-gray-50/50 transition-colors">
+                            <td class="px-6 py-3.5"><span class="font-semibold text-gray-800">08:10 – 08:15</span></td>
+                            <td class="px-6 py-3.5 text-gray-700">Moment of Reflection / Invocation (Praying)</td>
+                        </tr>
+
+                        {{-- Welcome Remarks --}}
+                        <tr class="hover:bg-gray-50/50 transition-colors">
+                            <td class="px-6 py-3.5"><span class="font-semibold text-gray-800">08:15 – 08:20</span></td>
+                            <td class="px-6 py-3.5">
+                                <span class="text-gray-700">Welcome Remarks by Conference Chair:</span>
+                                <span class="font-medium text-gray-900 block sm:inline"> Prof. Dra. Ni Luh Watiniasih, M.Sc., Ph.D.</span>
+                            </td>
+                        </tr>
+
+                        {{-- Remarks NEMA India --}}
+                        <tr class="hover:bg-gray-50/50 transition-colors">
+                            <td class="px-6 py-3.5"><span class="font-semibold text-gray-800">08:20 – 08:25</span></td>
+                            <td class="px-6 py-3.5">
+                                <span class="text-gray-700">Remarks by International Partner Institution, NEMA India:</span>
+                                <span class="font-medium text-gray-900 block sm:inline"> Prof. W. Chandbabu Singh</span>
+                            </td>
+                        </tr>
+
+                        {{-- Remarks FiNder --}}
+                        <tr class="hover:bg-gray-50/50 transition-colors">
+                            <td class="px-6 py-3.5"><span class="font-semibold text-gray-800">08:25 – 08:30</span></td>
+                            <td class="px-6 py-3.5">
+                                <span class="text-gray-700">Remarks by Co-Organizing Partner, FiNder Universitas Padjadjaran:</span>
+                                <span class="font-medium text-gray-900 block sm:inline"> Prof. I Made Joni</span>
+                            </td>
+                        </tr>
+
+                        {{-- Opening Address --}}
+                        <tr class="hover:bg-gray-50/50 transition-colors">
+                            <td class="px-6 py-3.5"><span class="font-semibold text-gray-800">08:30 – 08:35</span></td>
+                            <td class="px-6 py-3.5 text-gray-700">Opening Address by Rector of Universitas Udayana</td>
+                        </tr>
+
+                        {{-- Symbolic Opening --}}
+                        <tr class="hover:bg-gray-50/50 transition-colors">
+                            <td class="px-6 py-3.5"><span class="font-semibold text-gray-800">08:35 – 08:40</span></td>
+                            <td class="px-6 py-3.5 text-gray-700">Symbolic Official Opening of the Conference (Gong Striking)</td>
+                        </tr>
+
+                        {{-- Group Photo --}}
+                        <tr class="hover:bg-gray-50/50 transition-colors">
+                            <td class="px-6 py-3.5"><span class="font-semibold text-gray-800">08:40 – 08:45</span></td>
+                            <td class="px-6 py-3.5 text-gray-700">Group Photo</td>
+                        </tr>
+
+                        {{-- Welcome Performance --}}
+                        <tr class="hover:bg-gray-50/50 transition-colors">
+                            <td class="px-6 py-3.5"><span class="font-semibold text-gray-800">08:45 – 09:00</span></td>
+                            <td class="px-6 py-3.5 text-gray-700">Welcome Performance: Traditional Balinese Dance</td>
+                        </tr>
+
+                        {{-- ═════════════════════════════════════════════════
+                             PLENARY SESSION 1
+                             ═════════════════════════════════════════════════ --}}
+                        <tr class="bg-sage/10">
+                            <td colspan="2" class="px-6 py-3">
+                                <div class="flex items-center gap-2">
+                                    <span class="w-1.5 h-6 bg-forest rounded-full"></span>
+                                    <span class="text-xs font-bold text-forest uppercase tracking-wider">Plenary Session 1 — Moderator: TBD</span>
+                                </div>
+                            </td>
+                        </tr>
+
+                        <tr class="hover:bg-gray-50/50 transition-colors">
+                            <td class="px-6 py-3.5"><span class="font-semibold text-gray-800">09:05 – 09:30</span></td>
+                            <td class="px-6 py-3.5 text-gray-700">Plenary Speech 1: KS-1</td>
+                        </tr>
+
+                        <tr class="hover:bg-gray-50/50 transition-colors">
+                            <td class="px-6 py-3.5"><span class="font-semibold text-gray-800">09:30 – 09:55</span></td>
+                            <td class="px-6 py-3.5 text-gray-700">Plenary Speech 2: KS-2</td>
+                        </tr>
+
+                        <tr class="hover:bg-gray-50/50 transition-colors">
+                            <td class="px-6 py-3.5"><span class="font-semibold text-gray-800">09:55 – 10:20</span></td>
+                            <td class="px-6 py-3.5 text-gray-700">Plenary Speech 3: KS-3</td>
+                        </tr>
+
+                        <tr class="hover:bg-gray-50/50 transition-colors">
+                            <td class="px-6 py-3.5"><span class="font-semibold text-gray-800">10:20 – 10:40</span></td>
+                            <td class="px-6 py-3.5 text-gray-700">Q&A Session</td>
+                        </tr>
+
+                        <tr class="hover:bg-gray-50/50 transition-colors">
+                            <td class="px-6 py-3.5"><span class="font-semibold text-gray-800">10:40 – 10:45</span></td>
+                            <td class="px-6 py-3.5 text-gray-700">Plaque Awarding Ceremony and Group Photo</td>
+                        </tr>
+
+                        <tr class="bg-ivory/70">
+                            <td class="px-6 py-3.5"><span class="font-semibold text-earth">10:45 – 11:00</span></td>
+                            <td class="px-6 py-3.5">
+                                <span class="inline-flex items-center gap-1.5 text-earth font-medium">
+                                    <svg class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M15 12H9m12 0a9 9 0 11-18 0 9 9 0 0118 0z" />
+                                    </svg>
+                                    Coffee Break 1
+                                </span>
+                            </td>
+                        </tr>
+
+                        {{-- ═════════════════════════════════════════════════
+                             PLENARY SESSION 2
+                             ═════════════════════════════════════════════════ --}}
+                        <tr class="bg-sage/10">
+                            <td colspan="2" class="px-6 py-3">
+                                <div class="flex items-center gap-2">
+                                    <span class="w-1.5 h-6 bg-forest rounded-full"></span>
+                                    <span class="text-xs font-bold text-forest uppercase tracking-wider">Plenary Session 2 — Moderator: TBD</span>
+                                </div>
+                            </td>
+                        </tr>
+
+                        <tr class="hover:bg-gray-50/50 transition-colors">
+                            <td class="px-6 py-3.5"><span class="font-semibold text-gray-800">11:05 – 11:30</span></td>
+                            <td class="px-6 py-3.5 text-gray-700">Plenary Speech 4: KS-4</td>
+                        </tr>
+
+                        <tr class="hover:bg-gray-50/50 transition-colors">
+                            <td class="px-6 py-3.5"><span class="font-semibold text-gray-800">11:30 – 11:55</span></td>
+                            <td class="px-6 py-3.5 text-gray-700">Plenary Speech 5: KS-5</td>
+                        </tr>
+
+                        <tr class="hover:bg-gray-50/50 transition-colors">
+                            <td class="px-6 py-3.5"><span class="font-semibold text-gray-800">11:55 – 12:20</span></td>
+                            <td class="px-6 py-3.5 text-gray-700">Plenary Speech 6: KS-6</td>
+                        </tr>
+
+                        <tr class="hover:bg-gray-50/50 transition-colors">
+                            <td class="px-6 py-3.5"><span class="font-semibold text-gray-800">12:20 – 12:40</span></td>
+                            <td class="px-6 py-3.5 text-gray-700">Q&A Session</td>
+                        </tr>
+
+                        <tr class="hover:bg-gray-50/50 transition-colors">
+                            <td class="px-6 py-3.5"><span class="font-semibold text-gray-800">12:40 – 12:45</span></td>
+                            <td class="px-6 py-3.5 text-gray-700">Plaque Awarding Ceremony and Group Photo</td>
+                        </tr>
+
+                        <tr class="bg-ivory/70">
+                            <td class="px-6 py-3.5"><span class="font-semibold text-earth">12:45 – 13:45</span></td>
+                            <td class="px-6 py-3.5">
+                                <span class="inline-flex items-center gap-1.5 text-earth font-medium">
+                                    <svg class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 8v4l3 3m6-3a9 9 0 11-18 0 9 9 0 0118 0z" />
+                                    </svg>
+                                    Lunch Break
+                                </span>
+                            </td>
+                        </tr>
+
+                        {{-- ═════════════════════════════════════════════════
+                             PLENARY SESSION 3
+                             ═════════════════════════════════════════════════ --}}
+                        <tr class="bg-sage/10">
+                            <td colspan="2" class="px-6 py-3">
+                                <div class="flex items-center gap-2">
+                                    <span class="w-1.5 h-6 bg-forest rounded-full"></span>
+                                    <span class="text-xs font-bold text-forest uppercase tracking-wider">Plenary Session 3 — Moderator: TBD</span>
+                                </div>
+                            </td>
+                        </tr>
+
+                        <tr class="hover:bg-gray-50/50 transition-colors">
+                            <td class="px-6 py-3.5"><span class="font-semibold text-gray-800">13:50 – 14:15</span></td>
+                            <td class="px-6 py-3.5 text-gray-700">Plenary Speech 7: KS-7</td>
+                        </tr>
+
+                        <tr class="hover:bg-gray-50/50 transition-colors">
+                            <td class="px-6 py-3.5"><span class="font-semibold text-gray-800">14:15 – 14:40</span></td>
+                            <td class="px-6 py-3.5 text-gray-700">Plenary Speech 8: KS-8</td>
+                        </tr>
+
+                        <tr class="hover:bg-gray-50/50 transition-colors">
+                            <td class="px-6 py-3.5"><span class="font-semibold text-gray-800">14:40 – 15:00</span></td>
+                            <td class="px-6 py-3.5 text-gray-700">Q&A Session</td>
+                        </tr>
+
+                        <tr class="hover:bg-gray-50/50 transition-colors">
+                            <td class="px-6 py-3.5"><span class="font-semibold text-gray-800">15:00 – 15:05</span></td>
+                            <td class="px-6 py-3.5 text-gray-700">Plaque Awarding Ceremony and Group Photo</td>
+                        </tr>
+
+                        <tr class="bg-ivory/70">
+                            <td class="px-6 py-3.5"><span class="font-semibold text-earth">15:05 – 15:20</span></td>
+                            <td class="px-6 py-3.5">
+                                <span class="inline-flex items-center gap-1.5 text-earth font-medium">
+                                    <svg class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M15 12H9m12 0a9 9 0 11-18 0 9 9 0 0118 0z" />
+                                    </svg>
+                                    Coffee Break 2
+                                </span>
+                            </td>
+                        </tr>
+
+                        {{-- ═════════════════════════════════════════════════
+                             VENUE: HYBRID VIA ZOOM
+                             ═════════════════════════════════════════════════ --}}
+                        <tr class="bg-atmosphere/5">
+                            <td colspan="2" class="px-6 py-3">
+                                <span class="inline-flex items-center gap-2 text-xs font-bold text-atmosphere uppercase tracking-wider">
+                                    <svg class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M15 10l4.553-2.276A1 1 0 0121 8.618v6.764a1 1 0 01-1.447.894L15 14M5 18h8a2 2 0 002-2V8a2 2 0 00-2-2H5a2 2 0 00-2 2v8a2 2 0 002 2z" />
+                                    </svg>
+                                    Venue: Lecture Building, Hybrid via Zoom
+                                </span>
+                            </td>
+                        </tr>
+
+                        <tr class="hover:bg-gray-50/50 transition-colors">
+                            <td class="px-6 py-3.5"><span class="font-semibold text-gray-800">15:20 – 15:35</span></td>
+                            <td class="px-6 py-3.5 text-gray-700">Forum Group Discussion: India – Indonesia / Oral Presentation from Invited &amp; Contributed Speakers (Session 1)</td>
+                        </tr>
+
+                        <tr class="hover:bg-gray-50/50 transition-colors">
+                            <td class="px-6 py-3.5"><span class="font-semibold text-gray-800">15:35 – 15:50</span></td>
+                            <td class="px-6 py-3.5 text-gray-700">Oral Presentation from Invited &amp; Contributed Speakers (Session 2)</td>
+                        </tr>
+
+                        <tr class="hover:bg-gray-50/50 transition-colors">
+                            <td class="px-6 py-3.5"><span class="font-semibold text-gray-800">15:50 – 16:05</span></td>
+                            <td class="px-6 py-3.5 text-gray-700">Oral Presentation from Invited &amp; Contributed Speakers (Session 3)</td>
+                        </tr>
+
+                        <tr class="hover:bg-gray-50/50 transition-colors">
+                            <td class="px-6 py-3.5"><span class="font-semibold text-gray-800">16:05 – 16:20</span></td>
+                            <td class="px-6 py-3.5 text-gray-700">Oral Presentation from Invited &amp; Contributed Speakers (Session 4)</td>
+                        </tr>
+
+                        <tr class="hover:bg-gray-50/50 transition-colors">
+                            <td class="px-6 py-3.5"><span class="font-semibold text-gray-800">16:20 – 16:35</span></td>
+                            <td class="px-6 py-3.5 text-gray-700">Oral Presentation from Invited &amp; Contributed Speakers (Session 5)</td>
+                        </tr>
+
+                        <tr class="hover:bg-gray-50/50 transition-colors">
+                            <td class="px-6 py-3.5"><span class="font-semibold text-gray-800">16:35 – 16:50</span></td>
+                            <td class="px-6 py-3.5 text-gray-700">Oral Presentation from Invited &amp; Contributed Speakers (Session 6)</td>
+                        </tr>
+
+                        {{-- Closing --}}
+                        <tr class="bg-forest/5 font-medium">
+                            <td class="px-6 py-3.5"><span class="font-semibold text-forest">16:50 – 17:10</span></td>
+                            <td class="px-6 py-3.5">
+                                <span class="inline-flex items-center gap-1.5 text-forest">
+                                    <svg class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7" />
+                                    </svg>
+                                    Closing – Commitment Indonesia – India
+                                </span>
+                            </td>
+                        </tr>
+
+                    </tbody>
+                </table>
+            </div>
+
+            {{-- Table Footer Note --}}
+            <div class="bg-gray-50 border-t border-gray-200 px-6 py-4">
+                <div class="flex items-start gap-2 text-xs text-gray-500">
+                    <svg class="w-4 h-4 text-gray-400 flex-shrink-0 mt-0.5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M13 16h-1v-4h-1m1-4h.01M21 12a9 9 0 11-18 0 9 9 0 0118 0z" />
+                    </svg>
+                    <span>
+                        <strong>Note:</strong> This rundown is tentative and subject to change. Times remain as originally scheduled; speaker assignments to each plenary/oral-presentation slot (KS-1–KS-8 and Sessions 1–6) are to be finalized from the speaker list.
+                    </span>
                 </div>
-                @endforeach
             </div>
         </div>
 
-        {{-- Closing Ceremony --}}
-        <div class="mb-12">
-            <h2 class="text-2xl font-display font-bold text-forest mb-6 flex items-center gap-3">
-                <span class="w-10 h-10 rounded-full bg-gradient-to-br from-forest to-sage flex items-center justify-center text-white text-lg">🎯</span>
-                Closing Ceremony
-            </h2>
-
-            <div class="bg-gradient-to-r from-forest/5 to-sage/5 rounded-xl border border-forest/10 p-6 border-l-4 border-l-forest">
-                <div class="flex flex-col sm:flex-row sm:items-center gap-4">
-                    <div class="flex-shrink-0 w-32 text-sm font-semibold text-atmosphere">15:30 - 16:30</div>
-                    <div class="flex-1">
-                        <span class="inline-block px-2 py-1 text-xs uppercase rounded-full bg-forest/10 text-forest mb-2">Closing</span>
-                        <h3 class="text-lg font-semibold text-forest">Closing Ceremony & Awards</h3>
-                        <p class="text-sm text-earth/70">Conference summary, awards presentation, and closing remarks by Chief Patrons</p>
-                    </div>
-                </div>
-            </div>
-        </div>
-
-        {{-- Download Calendar CTA --}}
-        <div class="text-center">
+        {{-- CTA --}}
+        <div class="text-center mt-10">
             <a href="{{ route('conference.calendar') }}" class="inline-flex items-center gap-2 px-8 py-4 bg-forest text-white font-display font-semibold rounded-full hover:bg-sage transition-all duration-300 hover:shadow-lg hover:shadow-sage/25">
                 <svg class="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                     <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M8 7V3m8 4V3m-9 8h10M5 21h14a2 2 0 002-2V7a2 2 0 00-2-2H5a2 2 0 00-2 2v12a2 2 0 002 2z" />

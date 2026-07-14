@@ -36,12 +36,6 @@
             </div>
 
             <div class="relative max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
-                {{-- Icon/Illustration --}}
-                <div class="w-20 h-20 bg-forest/10 rounded-2xl flex items-center justify-center mx-auto mb-6">
-                    <svg class="w-10 h-10 text-forest" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 12h6m-6 4h6m2 5H7a2 2 0 01-2-2V5a2 2 0 012-2h5.586a1 1 0 01.707.293l5.414 5.414a1 1 0 01.293.707V19a2 2 0 01-2 2z" />
-                    </svg>
-                </div>
 
                 <span class="inline-block px-4 py-1.5 bg-forest/10 text-forest rounded-full text-sm font-medium mb-6">
                     GETS 2026
@@ -66,6 +60,37 @@
             </div>
         </section>
 
+        {{-- Sub-themes Section --}}
+        <section class="py-16 md:py-20 bg-ivory">
+            <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+                <div class="text-center mb-12">
+                    <h2 class="font-display text-3xl md:text-4xl text-forest font-bold mb-4">
+                        13 Interdisciplinary Sub-themes
+                    </h2>
+                    <p class="text-lg text-earth max-w-2xl mx-auto">
+                        We welcome submissions across these interconnected research areas
+                    </p>
+                </div>
+
+                <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
+                    @foreach($subthemes as $index => $subtheme)
+                        <div class="group bg-white rounded-xl p-6 hover:bg-forest/5 transition-all duration-300 hover:shadow-lg border border-forest/10">
+                            <div class="flex items-start gap-4">
+                                <div class="flex-shrink-0 w-10 h-10 bg-forest rounded-lg flex items-center justify-center text-white font-display font-bold">
+                                    {{ $index + 1 }}
+                                </div>
+                                <div>
+                                    <h3 class="font-display text-lg text-forest font-semibold mb-2 group-hover:text-sage transition-colors">
+                                        {{ $subtheme }}
+                                    </h3>
+                                </div>
+                            </div>
+                        </div>
+                    @endforeach
+                </div>
+            </div>
+        </section>
+
         {{-- Abstract Submission Overview --}}
         <section class="py-16 md:py-20 bg-ivory">
             <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
@@ -79,41 +104,18 @@
                 </div>
 
                 <div class="max-w-3xl mx-auto">
-                    <div class="grid md:grid-cols-1 gap-6">
-                        <div class="flex items-start gap-4 bg-white rounded-xl p-6 shadow-sm">
-                            <div class="flex-shrink-0 w-10 h-10 bg-forest/10 rounded-lg flex items-center justify-center">
-                                <svg class="w-5 h-5 text-forest" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 12l2 2 4-4m6 2a9 9 0 11-18 0 9 9 0 0118 0z" />
-                                </svg>
-                            </div>
-                            <div>
-                                <h3 class="font-display text-lg font-semibold text-forest mb-2">Submit Original Research</h3>
-                                <p class="text-earth">Share your unpublished research findings with the global academic community.</p>
-                            </div>
+                    <div class="grid md:grid-cols-3 gap-6">
+                        <div class="bg-white rounded-xl p-6 shadow-sm text-center">
+                            <h3 class="font-display text-lg font-semibold text-forest mb-2">Submit Original Research</h3>
+                            <p class="text-earth text-sm">Share your unpublished research findings with the global academic community.</p>
                         </div>
-
-                        <div class="flex items-start gap-4 bg-white rounded-xl p-6 shadow-sm">
-                            <div class="flex-shrink-0 w-10 h-10 bg-forest/10 rounded-lg flex items-center justify-center">
-                                <svg class="w-5 h-5 text-forest" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 12l2 2 4-4m6 2a9 9 0 11-18 0 9 9 0 0118 0z" />
-                                </svg>
-                            </div>
-                            <div>
-                                <h3 class="font-display text-lg font-semibold text-forest mb-2">Align with Conference Themes</h3>
-                                <p class="text-earth">Your abstract should relate to one of our 13 interdisciplinary sub-themes on climate resilience and green transition.</p>
-                            </div>
+                        <div class="bg-white rounded-xl p-6 shadow-sm text-center">
+                            <h3 class="font-display text-lg font-semibold text-forest mb-2">Align with Conference Themes</h3>
+                            <p class="text-earth text-sm">Your abstract should relate to one of our 13 interdisciplinary sub-themes on climate resilience and green transition.</p>
                         </div>
-
-                        <div class="flex items-start gap-4 bg-white rounded-xl p-6 shadow-sm">
-                            <div class="flex-shrink-0 w-10 h-10 bg-forest/10 rounded-lg flex items-center justify-center">
-                                <svg class="w-5 h-5 text-forest" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 12l2 2 4-4m6 2a9 9 0 11-18 0 9 9 0 0118 0z" />
-                                </svg>
-                            </div>
-                            <div>
-                                <h3 class="font-display text-lg font-semibold text-forest mb-2">Peer Review Process</h3>
-                                <p class="text-earth">All submitted abstracts will undergo review by our expert committee. Selected authors will be notified of acceptance.</p>
-                            </div>
+                        <div class="bg-white rounded-xl p-6 shadow-sm text-center">
+                            <h3 class="font-display text-lg font-semibold text-forest mb-2">Peer Review Process</h3>
+                            <p class="text-earth text-sm">All submitted abstracts will undergo review by our expert committee. Selected authors will be notified of acceptance.</p>
                         </div>
                     </div>
                 </div>
@@ -128,58 +130,144 @@
                         Important Dates
                     </h2>
                     <p class="text-lg text-earth">
-                        Mark these key milestones in your calendar
+                        Key milestones — deadlines vary by participant category
                     </p>
                 </div>
 
-                <div class="grid md:grid-cols-2 lg:grid-cols-4 gap-6 max-w-5xl mx-auto">
-                    {{-- Date 1 --}}
-                    <div class="bg-forest/5 rounded-xl p-6 border-2 border-forest/10 text-center hover:border-forest/30 transition-all">
-                        <div class="w-12 h-12 bg-forest/10 rounded-full flex items-center justify-center mx-auto mb-4">
-                            <svg class="w-6 h-6 text-forest" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M8 7V3m8 4V3m-9 8h10M5 21h14a2 2 0 002-2V7a2 2 0 00-2-2H5a2 2 0 00-2 2v12a2 2 0 002 2z" />
-                            </svg>
+                <div class="max-w-5xl mx-auto space-y-8">
+
+                    {{-- ════════════════════════════════════════════
+                         Indian Delegates (Coordinated by NEMA)
+                         ════════════════════════════════════════════ --}}
+                    <div class="bg-gradient-to-br from-orange-50 to-amber-50 rounded-2xl p-6 md:p-8 border border-orange-200/60">
+                        <div class="flex items-center gap-3 mb-6">
+                            <div class="w-10 h-10 bg-orange-500 rounded-lg flex items-center justify-center flex-shrink-0">
+                                <svg class="w-5 h-5 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M3 21v-4m0 0V5a2 2 0 012-2h6.5l1 1H21l-3 6 3 6h-8.5l-1-1H5a2 2 0 00-2 2zm9-13.5V9" />
+                                </svg>
+                            </div>
+                            <div>
+                                <h3 class="text-xl font-bold text-gray-900">Indian Delegates</h3>
+                                <p class="text-sm text-gray-600">Coordinated by NEMA</p>
+                            </div>
                         </div>
-                        <h3 class="font-display text-base font-semibold text-forest mb-2">Abstract Submission Deadline</h3>
-                        <p class="text-2xl font-display font-bold text-forest mb-1">10 August</p>
-                        <p class="text-sm text-earth">2026</p>
+                        <div class="grid grid-cols-1 md:grid-cols-2 gap-4">
+                            <div class="bg-white rounded-xl p-5 border border-orange-200 shadow-sm">
+                                <div class="flex items-center gap-2 mb-3">
+                                    <svg class="w-5 h-5 text-orange-500" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M8 7V3m8 4V3m-9 8h10M5 21h14a2 2 0 002-2V7a2 2 0 00-2-2H5a2 2 0 00-2 2v12a2 2 0 002 2z" />
+                                    </svg>
+                                    <span class="text-sm font-semibold text-gray-900">Abstract Submission</span>
+                                </div>
+                                <p class="text-2xl md:text-3xl font-bold text-orange-600">15 July 2026</p>
+                                <p class="text-xs text-gray-500 mt-1">For Presenters / Authors</p>
+                            </div>
+                            <div class="bg-white rounded-xl p-5 border border-orange-200 shadow-sm">
+                                <div class="flex items-center gap-2 mb-3">
+                                    <svg class="w-5 h-5 text-orange-500" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 12l2 2 4-4m5.618-4.016A11.955 11.955 0 0112 2.944a11.955 11.955 0 01-8.618 3.04A12.02 12.02 0 003 9c0 5.591 3.824 10.29 9 11.622 5.176-1.332 9-6.03 9-11.622 0-1.042-.133-2.052-.382-3.016z" />
+                                    </svg>
+                                    <span class="text-sm font-semibold text-gray-900">Registration Deadline</span>
+                                </div>
+                                <p class="text-2xl md:text-3xl font-bold text-orange-600">25 July 2026</p>
+                                <p class="text-xs text-gray-500 mt-1">For All Delegates</p>
+                            </div>
+                        </div>
+                        <p class="text-sm text-gray-600 mt-4">
+                            For detailed guidelines, download the
+                            <a href="/docs/GETS_2026_Indian_Guidelines.pdf" target="_blank" class="text-orange-600 hover:text-orange-700 font-medium underline underline-offset-2">Indian Guidelines PDF</a>
+                            or email
+                            <a href="mailto:secretarynema2016@gmail.com" class="text-orange-600 hover:text-orange-700 font-medium underline underline-offset-2">secretarynema2016@gmail.com</a>
+                        </p>
                     </div>
 
-                    {{-- Date 2 --}}
-                    <div class="bg-forest/5 rounded-xl p-6 border-2 border-forest/10 text-center hover:border-forest/30 transition-all">
-                        <div class="w-12 h-12 bg-forest/10 rounded-full flex items-center justify-center mx-auto mb-4">
-                            <svg class="w-6 h-6 text-forest" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M17 20h5v-2a3 3 0 00-5.356-1.857M17 20H7m10 0v-2c0-.656-.126-1.283-.356-1.857M7 20H2v-2a3 3 0 015.356-1.857M7 20v-2c0-.656.126-1.283.356-1.857m0 0a5.002 5.002 0 019.288 0M15 7a3 3 0 11-6 0 3 3 0 016 0z" />
-                            </svg>
+                    {{-- ════════════════════════════════════════════
+                         Indonesia & International Participants
+                         ════════════════════════════════════════════ --}}
+                    <div class="bg-gradient-to-br from-emerald-50 to-teal-50 rounded-2xl p-6 md:p-8 border border-emerald-200/60">
+                        <div class="flex items-center gap-3 mb-6">
+                            <div class="w-10 h-10 bg-teal-600 rounded-lg flex items-center justify-center flex-shrink-0">
+                                <svg class="w-5 h-5 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M3.055 11H5a2 2 0 012 2v1a2 2 0 002 2 2 2 0 012 2v2.945M8 3.935V5.5A2.5 2.5 0 0010.5 8h.5a2 2 0 012 2 2 2 0 104 0 2 2 0 012-2h1.064M15 20.488V18a2 2 0 012-2h3.064M21 12a9 9 0 11-18 0 9 9 0 0118 0z" />
+                                </svg>
+                            </div>
+                            <div>
+                                <h3 class="text-xl font-bold text-gray-900">Indonesia &amp; General International Participants</h3>
+                                <p class="text-sm text-gray-600">Direct Registration</p>
+                            </div>
                         </div>
-                        <h3 class="font-display text-base font-semibold text-forest mb-2">Registration Deadline</h3>
-                        <p class="text-2xl font-display font-bold text-forest mb-1">10 August</p>
-                        <p class="text-sm text-earth">2026</p>
+                        <div class="grid grid-cols-1 md:grid-cols-2 gap-4">
+                            <div class="bg-white rounded-xl p-5 border border-emerald-200 shadow-sm">
+                                <div class="flex items-center gap-2 mb-3">
+                                    <svg class="w-5 h-5 text-teal-600" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M8 7V3m8 4V3m-9 8h10M5 21h14a2 2 0 002-2V7a2 2 0 00-2-2H5a2 2 0 00-2 2v12a2 2 0 002 2z" />
+                                    </svg>
+                                    <span class="text-sm font-semibold text-gray-900">Abstract Submission</span>
+                                </div>
+                                <p class="text-2xl md:text-3xl font-bold text-teal-700">10 August 2026</p>
+                                <p class="text-xs text-gray-500 mt-1">For Presenters / Authors</p>
+                            </div>
+                            <div class="bg-white rounded-xl p-5 border border-emerald-200 shadow-sm">
+                                <div class="flex items-center gap-2 mb-3">
+                                    <svg class="w-5 h-5 text-teal-600" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 12l2 2 4-4m5.618-4.016A11.955 11.955 0 0112 2.944a11.955 11.955 0 01-8.618 3.04A12.02 12.02 0 003 9c0 5.591 3.824 10.29 9 11.622 5.176-1.332 9-6.03 9-11.622 0-1.042-.133-2.052-.382-3.016z" />
+                                    </svg>
+                                    <span class="text-sm font-semibold text-gray-900">Registration Deadline</span>
+                                </div>
+                                <p class="text-2xl md:text-3xl font-bold text-teal-700">23 August 2026</p>
+                                <p class="text-xs text-gray-500 mt-1">For All Participants</p>
+                            </div>
+                        </div>
+                        <p class="text-sm text-gray-600 mt-4">
+                            Submit through the
+                            <a href="{{ config('conference.conf_ms_web_url') }}" target="_blank" class="text-teal-600 hover:text-teal-700 font-medium underline underline-offset-2">registration portal</a>
+                            or email your abstract to
+                            <a href="mailto:info@jptranstech.org" class="text-teal-600 hover:text-teal-700 font-medium underline underline-offset-2">info@jptranstech.org</a>
+                        </p>
                     </div>
 
-                    {{-- Date 3 --}}
-                    <div class="bg-forest/5 rounded-xl p-6 border-2 border-forest/10 text-center hover:border-forest/30 transition-all">
-                        <div class="w-12 h-12 bg-forest/10 rounded-full flex items-center justify-center mx-auto mb-4">
-                            <svg class="w-6 h-6 text-forest" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M15 17h5l-1.405-1.405A2.032 2.032 0 0118 14.158V11a6.002 6.002 0 00-4-5.659V5a2 2 0 10-4 0v.341C7.67 6.165 6 8.388 6 11v3.159c0 .538-.214 1.055-.595 1.436L4 17h5m6 0v1a3 3 0 11-6 0v-1m6 0H9" />
-                            </svg>
+                    {{-- ════════════════════════════════════════════
+                         Summit & Event Days (Bali, Hybrid)
+                         ════════════════════════════════════════════ --}}
+                    <div class="bg-gradient-to-br from-slate-50 to-gray-100 rounded-2xl p-6 md:p-8 border border-slate-200/60">
+                        <div class="flex items-center gap-3 mb-6">
+                            <div class="w-10 h-10 bg-slate-600 rounded-lg flex items-center justify-center flex-shrink-0">
+                                <svg class="w-5 h-5 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M8 7V3m8 4V3m-9 8h10M5 21h14a2 2 0 002-2V7a2 2 0 00-2-2H5a2 2 0 00-2 2v12a2 2 0 002 2z" />
+                                </svg>
+                            </div>
+                            <div>
+                                <h3 class="text-xl font-bold text-gray-900">Summit &amp; Event Days</h3>
+                                <p class="text-sm text-gray-600">Lecture Building, Universitas Udayana, Bali — Hybrid Conference</p>
+                            </div>
                         </div>
-                        <h3 class="font-display text-base font-semibold text-forest mb-2">Notification of Acceptance</h3>
-                        <p class="text-2xl font-display font-bold text-forest mb-1">20 August</p>
-                        <p class="text-sm text-earth">2026</p>
+                        <div class="grid grid-cols-1 md:grid-cols-2 gap-4">
+                            <div class="bg-white rounded-xl p-5 border border-slate-200 shadow-sm">
+                                <div class="flex items-center gap-2 mb-3">
+                                    <svg class="w-5 h-5 text-slate-600" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M8 7V3m8 4V3m-9 8h10M5 21h14a2 2 0 002-2V7a2 2 0 00-2-2H5a2 2 0 00-2 2v12a2 2 0 002 2z" />
+                                    </svg>
+                                    <span class="text-sm font-semibold text-gray-900">Conference Day</span>
+                                </div>
+                                <p class="text-2xl md:text-3xl font-bold text-slate-800">24 August 2026</p>
+                                <p class="text-xs text-gray-500 mt-1">Plenary &amp; Parallel Sessions (09:00 – 17:20 WITA)</p>
+                            </div>
+                            <div class="bg-white rounded-xl p-5 border border-slate-200 shadow-sm">
+                                <div class="flex items-center gap-2 mb-3">
+                                    <svg class="w-5 h-5 text-slate-600" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 12l2 2 4-4m6 2a9 9 0 11-18 0 9 9 0 0118 0z" />
+                                    </svg>
+                                    <span class="text-sm font-semibold text-gray-900">Special Program</span>
+                                </div>
+                                <p class="text-2xl md:text-3xl font-bold text-slate-800">25 August 2026</p>
+                                <p class="text-xs text-gray-500 mt-1">Learning Visit to su-re.co <span class="font-medium text-amber-600">(Strictly Limited to 50 Seats)</span></p>
+                            </div>
+                        </div>
+                        <p class="text-sm text-gray-600 mt-4">
+                            <span class="font-medium text-slate-700">Important Notice:</span> Technical presentation slides and digital poster files must be submitted via email before <span class="font-semibold text-slate-800">3 August 2026</span>.
+                        </p>
                     </div>
 
-                    {{-- Date 4 --}}
-                    <div class="bg-forest/5 rounded-xl p-6 border-2 border-forest/10 text-center hover:border-forest/30 transition-all">
-                        <div class="w-12 h-12 bg-sage/20 rounded-full flex items-center justify-center mx-auto mb-4">
-                            <svg class="w-6 h-6 text-sage" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M8 7V3m8 4V3m-9 8h10M5 21h14a2 2 0 002-2V7a2 2 0 00-2-2H5a2 2 0 00-2 2v12a2 2 0 002 2z" />
-                            </svg>
-                        </div>
-                        <h3 class="font-display text-base font-semibold text-forest mb-2">Conference Day</h3>
-                        <p class="text-2xl font-display font-bold text-forest mb-1">24 August</p>
-                        <p class="text-sm text-earth">2026</p>
-                    </div>
                 </div>
             </div>
         </section>
@@ -340,36 +428,7 @@
             </div>
         </section>
 
-        {{-- Sub-themes Section (KEPT) --}}
-        <section class="py-16 md:py-20 bg-ivory">
-            <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-                <div class="text-center mb-12">
-                    <h2 class="font-display text-3xl md:text-4xl text-forest font-bold mb-4">
-                        13 Interdisciplinary Sub-themes
-                    </h2>
-                    <p class="text-lg text-earth max-w-2xl mx-auto">
-                        We welcome submissions across these interconnected research areas
-                    </p>
-                </div>
-
-                <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
-                    @foreach($subthemes as $index => $subtheme)
-                        <div class="group bg-white rounded-xl p-6 hover:bg-forest/5 transition-all duration-300 hover:shadow-lg border border-forest/10">
-                            <div class="flex items-start gap-4">
-                                <div class="flex-shrink-0 w-10 h-10 bg-forest rounded-lg flex items-center justify-center text-white font-display font-bold">
-                                    {{ $index + 1 }}
-                                </div>
-                                <div>
-                                    <h3 class="font-display text-lg text-forest font-semibold mb-2 group-hover:text-sage transition-colors">
-                                        {{ $subtheme }}
-                                    </h3>
-                                </div>
-                            </div>
-                        </div>
-                    @endforeach
-                </div>
-            </div>
-        </section>
+        {{-- Sub-themes Section (Moved after hero) --}}
 
         {{-- Submission Process --}}
         <section class="py-16 md:py-20 bg-white">

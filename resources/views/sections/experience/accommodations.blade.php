@@ -5,7 +5,7 @@
 --}}
 @props(['accommodations' => null])
 
-<section class="section-cinematic bg-forest-50 relative">
+<section class="section-cinematic bg-forest-50 relative py-12 md:py-16">
     <div class="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8">
         <div class="text-center mb-16">
             <span class="inline-block px-4 py-1.5 bg-sage/10 text-forest font-medium text-sm rounded-full mb-6 font-sans">Stay in Bali</span>

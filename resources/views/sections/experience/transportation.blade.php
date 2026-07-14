@@ -5,7 +5,7 @@
 --}}
 @props(['transportation' => null])
 
-<section class="section-cinematic bg-white relative">
+<section class="section-cinematic bg-white relative py-12 md:py-16">
     <div class="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8">
         <div class="text-center mb-16">
             <span class="inline-block px-4 py-1.5 bg-atmosphere/10 text-atmosphere font-medium text-sm rounded-full mb-6 font-sans">Getting There</span>

@@ -4,7 +4,7 @@
 
 @section('content')
 @php
-    $allSpeakers = collect(include resource_path('data/speakers.php'));
+    $allSpeakers = collect(include resource_path('data/speakers.php'))->filter(fn($s) => $s['photo'] !== null)->values();
 @endphp
 
 <div class="min-h-screen bg-white pt-20">

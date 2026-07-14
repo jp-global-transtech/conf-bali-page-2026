@@ -5,7 +5,7 @@
 --}}
 @props(['venue' => null])
 
-<section class="section-cinematic atmosphere-ivory relative">
+<section class="section-cinematic relative py-12 md:py-16">
     <div class="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8">
         <div class="grid lg:grid-cols-2 gap-16 items-center">
 
@@ -83,6 +83,36 @@
                 </a>
             </div>
 
+        </div>
+
+        {{-- Google Maps --}}
+        <div class="mt-12">
+            <div class="rounded-2xl overflow-hidden shadow-lg border border-gray-200">
+                <iframe
+                    src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3943.867366789986!2d115.1645!3d-8.7902!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x2dd2408a9b6c4f17%3A0x6c5e6e4e4e4e4e4e!2sLecture%20Building%2C%20Universitas%20Udayana%2C%20Jimbaran!5e0!3m2!1sid!2sid!4v1715980000000!5m2!1sid!2sid"
+                    width="100%"
+                    height="350"
+                    style="border: 0;"
+                    allowfullscreen=""
+                    loading="lazy"
+                    referrerpolicy="no-referrer-when-downgrade"
+                    class="w-full">
+                </iframe>
+            </div>
+            <div class="flex flex-col sm:flex-row items-start sm:items-center justify-between gap-2 mt-3">
+                <p class="text-sm text-earth/70">
+                    <span class="font-medium text-forest">Lecture Building</span>
+                    — Jl. Prabu Udayana, Jimbaran, Bali
+                </p>
+                <a href="https://www.google.com/maps/search/?api=1&query=Universitas+Udayana+Lecture+Building+Jimbaran"
+                   target="_blank" rel="noopener noreferrer"
+                   class="text-sm text-forest font-medium hover:underline inline-flex items-center gap-1 flex-shrink-0">
+                    <span>Open in Google Maps</span>
+                    <svg class="w-3.5 h-3.5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M10 6H6a2 2 0 00-2 2v10a2 2 0 002 2h10a2 2 0 002-2v-4M14 4h6m0 0v6m0-6L10 14" />
+                    </svg>
+                </a>
+            </div>
         </div>
     </div>
 </section>

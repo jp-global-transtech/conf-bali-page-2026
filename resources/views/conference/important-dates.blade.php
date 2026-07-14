@@ -210,13 +210,13 @@
                     </div>
                     <div class="bg-white/10 rounded-xl p-5">
                         <p class="text-xs text-white/70 mb-2">Venue</p>
-                        <p class="text-lg font-semibold">Lecture Building</p>
-                        <p class="text-sm text-white/70 mt-1">Universitas Udayana</p>
+                        <p class="text-lg font-semibold">Lecture Building, Universitas Udayana</p>
+                        
                     </div>
                     <div class="bg-white/10 rounded-xl p-5">
                         <p class="text-xs text-white/70 mb-2">Location</p>
                         <p class="text-lg font-semibold">Bali, Indonesia</p>
-                        <p class="text-sm text-white/70 mt-1">Archipelago of the Gods</p>
+                        
                     </div>
                 </div>
 

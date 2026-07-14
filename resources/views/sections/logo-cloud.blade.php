@@ -8,14 +8,8 @@
     $organizedBy = $partnerLogos['organized_by'] ?? [];
 @endphp
 
-<section class="py-16 bg-gray-50">
+<section class="py-6 md:py-8 bg-gray-50">
     <div class="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
-
-        {{-- Section Header --}}
-        <h2 class="text-3xl font-display font-bold text-gray-900 mb-3">Global Collaboration Network</h2>
-        <p class="text-gray-600 max-w-3xl mx-auto mb-12 text-sm leading-relaxed">
-            Connecting academic, research, and professional institutions<br>to advance sustainable transition.
-        </p>
 
         {{-- Organized By --}}
         @if(!empty($organizedBy))

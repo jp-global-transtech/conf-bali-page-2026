@@ -29,4 +29,7 @@ return [
     'register_now' => 'Register Now',
     'explore_themes' => 'Explore Themes',
     'view_all_speakers' => 'View All Speakers',
+
+    // WhatsApp Widget
+    'chat_with_us' => 'Need help? Ask us on WhatsApp',
 ];
