@@ -9,6 +9,14 @@
     aria-label="Loading"
     x-cloak
 >
+    {{-- Progress Bar --}}
+    <div class="absolute top-0 left-0 right-0 h-[3px] bg-forest/10">
+        <div
+            class="h-full bg-gradient-to-r from-forest to-sage transition-all duration-300"
+            :style="{ width: $store.loading.progress + '%' }"
+        ></div>
+    </div>
+
     {{-- Logo --}}
     <div>
         <img src="{{ asset('logo-gets-2026.png') }}" alt="Conference Logo" class="h-16 w-auto object-contain animate-pulse">

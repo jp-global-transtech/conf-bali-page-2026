@@ -4,24 +4,8 @@
 @section('meta-description', 'Submit your abstract for the Global Environment & Transition Summit 2026 (GETS 2026). 13 interdisciplinary sub-themes on climate resilience and green transition.')
 
 @section('content')
-{{-- Page Loading State --}}
-<div x-data="{
-    isLoading: true,
-    init() {
-        // Also update store for footer visibility
-        this.$store.loading = this.$store.loading || {};
-        this.$store.loading.isLoading = true;
-        setTimeout(() => {
-            this.isLoading = false;
-            this.$store.loading.isLoading = false;
-        }, 800);
-    }
-}">
-    {{-- Loading Screen --}}
-    @include('components.loading-screen')
-
-    {{-- Main Content --}}
-    <div x-show="!isLoading" x-cloak x-transition:enter="transition ease-out duration-500" x-transition:enter-start="opacity-0" x-transition:enter-end="opacity-100">
+<div x-data>
+    <div x-show="!$store.loading.isLoading" x-cloak x-transition:enter="transition ease-out duration-500" x-transition:enter-start="opacity-0" x-transition:enter-end="opacity-100">
 
         {{-- Hero Section --}}
         <section class="relative min-h-[50vh] flex items-center justify-center overflow-hidden py-20 md:py-32">
@@ -593,7 +577,5 @@
 @endsection
 
 @section('footer')
-<div x-data x-show="!$store.loading.isLoading" x-cloak x-transition:enter="transition ease-out duration-500" x-transition:enter-start="opacity-0" x-transition:enter-end="opacity-100">
-    <x-footer />
-</div>
+<x-footer />
 @endsection

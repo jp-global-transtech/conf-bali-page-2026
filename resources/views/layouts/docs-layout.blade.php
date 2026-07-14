@@ -34,6 +34,9 @@
     @vite(['resources/css/app.css', 'resources/js/app.js'])
 </head>
 <body class="bg-gray-50 font-sans antialiased">
+    {{-- Loading Screen --}}
+    @include('components.loading-screen')
+
     {{-- Docs Header --}}
     <header class="fixed top-0 left-0 right-0 z-50 bg-white border-b border-gray-200">
         <div class="flex items-center justify-between px-4 sm:px-6 lg:px-8 h-16">

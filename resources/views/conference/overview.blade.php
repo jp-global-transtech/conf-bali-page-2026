@@ -4,20 +4,8 @@
 @section('meta-description', 'GETS 2026 is an action-driven ecosystem connecting academia, government, industry, and civil society to accelerate the global green transition through interdisciplinary collaboration.')
 
 @section('content')
-<div x-data="{
-    isLoading: true,
-    init() {
-        this.$store.loading = this.$store.loading || {};
-        this.$store.loading.isLoading = true;
-        setTimeout(() => {
-            this.isLoading = false;
-            this.$store.loading.isLoading = false;
-        }, 800);
-    }
-}">
-    @include('components.loading-screen')
-
-    <div x-show="!isLoading" x-cloak x-transition:enter="transition ease-out duration-500" x-transition:enter-start="opacity-0" x-transition:enter-end="opacity-100">
+<div x-data>
+    <div x-show="!$store.loading.isLoading" x-cloak x-transition:enter="transition ease-out duration-500" x-transition:enter-start="opacity-0" x-transition:enter-end="opacity-100">
 
         {{-- 1. HERO SECTION --}}
         <section class="relative bg-forest py-24 md:py-36">
@@ -296,7 +284,5 @@
 @endsection
 
 @section('footer')
-<div x-data x-show="!$store.loading.isLoading" x-cloak x-transition:enter="transition ease-out duration-500" x-transition:enter-start="opacity-0" x-transition:enter-end="opacity-100">
-    <x-footer />
-</div>
+<x-footer />
 @endsection

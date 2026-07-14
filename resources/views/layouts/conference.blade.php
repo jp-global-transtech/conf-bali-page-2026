@@ -30,6 +30,9 @@
         @vite(['resources/css/app.css', 'resources/js/app.js'])
     </head>
     <body class="font-sans text-gray-900 antialiased">
+        {{-- Loading Screen --}}
+        @include('components.loading-screen')
+
         {{-- Navigation --}}
         <x-navigation />
 
