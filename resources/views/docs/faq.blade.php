@@ -69,8 +69,7 @@
                      x-collapse
                      x-cloak>
                     <div class="px-5 pb-5 text-slate-600 text-sm leading-relaxed space-y-2">
-                        <p><strong>Yes, absolutely.</strong> We warmly welcome undergraduate and postgraduate students to participate. However, please note that the special <strong>Student Participant rate (IDR 150,000)</strong> is <strong>strictly restricted to the Virtual/Online tier</strong> and applies only to <em>Listener (Non-Presenter)</em> status. You must upload a valid Student ID (KTM) during registration.</p>
-                        <p>Students who wish to submit a paper and act as a <em>Presenter</em> must register under the regular <strong>Indonesia Participant (Online/On-site)</strong> tier.</p>
+                        <p><strong>Yes, absolutely.</strong> We warmly welcome undergraduate and postgraduate students to participate. Students must register under the <strong>Indonesia Participant (Online Only)</strong> tier and select the appropriate registration category during the registration process.</p>
                     </div>
                 </div>
             </div>
@@ -91,8 +90,7 @@
                      x-collapse
                      x-cloak>
                     <div class="px-5 pb-5 text-slate-600 text-sm leading-relaxed space-y-2">
-                        <p>The primary track for Indonesian participants is directed <em>Online/Virtual</em> for time efficiency and to maximize international networking space at the physical venue.</p>
-                        <p>However, we do open a limited exception for domestic participants who wish to attend physically at Universitas Udayana, Bali. <strong>On-site seats for domestic participants are strictly limited.</strong> Once the maximum database quota is reached, the system will automatically lock this option and direct you to the <em>Online</em> track.</p>
+                        <p>Indonesian participants are directed to the <em>Online/Virtual</em> attendance mode. The registration fee for Indonesia Participants is <strong>IDR 500,000 (Online Only)</strong>.</p>
                     </div>
                 </div>
             </div>

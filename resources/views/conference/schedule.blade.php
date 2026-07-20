@@ -106,28 +106,19 @@
                         {{-- Welcome Remarks --}}
                         <tr class="hover:bg-gray-50/50 transition-colors">
                             <td class="px-6 py-3.5"><span class="font-semibold text-gray-800">08:15 – 08:20</span></td>
-                            <td class="px-6 py-3.5">
-                                <span class="text-gray-700">Welcome Remarks by Conference Chair:</span>
-                                <span class="font-medium text-gray-900 block sm:inline"> Prof. Dra. Ni Luh Watiniasih, M.Sc., Ph.D.</span>
-                            </td>
+                            <td class="px-6 py-3.5 text-gray-700">Welcome Remarks by Conference Chair</td>
                         </tr>
 
                         {{-- Remarks NEMA India --}}
                         <tr class="hover:bg-gray-50/50 transition-colors">
                             <td class="px-6 py-3.5"><span class="font-semibold text-gray-800">08:20 – 08:25</span></td>
-                            <td class="px-6 py-3.5">
-                                <span class="text-gray-700">Remarks by International Partner Institution, NEMA India:</span>
-                                <span class="font-medium text-gray-900 block sm:inline"> Prof. W. Chandbabu Singh</span>
-                            </td>
+                            <td class="px-6 py-3.5 text-gray-700">Remarks by International Partner Institution, NEMA India</td>
                         </tr>
 
                         {{-- Remarks FiNder --}}
                         <tr class="hover:bg-gray-50/50 transition-colors">
                             <td class="px-6 py-3.5"><span class="font-semibold text-gray-800">08:25 – 08:30</span></td>
-                            <td class="px-6 py-3.5">
-                                <span class="text-gray-700">Remarks by Co-Organizing Partner, FiNder Universitas Padjadjaran:</span>
-                                <span class="font-medium text-gray-900 block sm:inline"> Prof. I Made Joni</span>
-                            </td>
+                            <td class="px-6 py-3.5 text-gray-700">Remarks by Co-Organizing Partner, FiNder Universitas Padjadjaran</td>
                         </tr>
 
                         {{-- Opening Address --}}

@@ -121,24 +121,7 @@
                 </div>
             </div>
 
-            {{-- Purchase Order --}}
-            <div class="bg-white rounded-xl p-6 border border-gray-200">
-                <div class="flex items-center gap-3 mb-4">
-                    <div class="w-10 h-10 bg-atmosphere/10 rounded-lg flex items-center justify-center">
-                        <svg class="w-5 h-5 text-atmosphere" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 12h6m-6 4h6m2 5H7a2 2 0 01-2-2V5a2 2 0 012-2h5.586a1 1 0 01.707.293l5.414 5.414a1 1 0 01.293.707V19a2 2 0 01-2 2z" />
-                        </svg>
-                    </div>
-                    <div>
-                        <h3 class="font-semibold text-forest">Official Purchase Order</h3>
-                        <p class="text-sm text-gray-500">For institutions</p>
-                    </div>
-                </div>
-                <div class="space-y-2 text-sm text-gray-600">
-                    <p><strong>Requirements:</strong> Minimum 3 registrants, official PO on letterhead</p>
-                    <p><strong>Payment Terms:</strong> Net 30 days from invoice date</p>
-                </div>
-            </div>
+
         </div>
     </section>
 
@@ -179,19 +162,9 @@
                         <td class="py-3 px-4 text-gray-600 text-xs hidden md:table-cell">Full virtual access to the conference platform, journal review track.</td>
                     </tr>
                     <tr class="hover:bg-forest/5 transition-colors">
-                        <td class="py-3 px-4 font-medium text-gray-800">Indonesia Participant (Online)</td>
-                        <td class="py-3 px-4 font-semibold text-forest whitespace-nowrap">IDR 250,000</td>
+                        <td class="py-3 px-4 font-medium text-gray-800">Indonesia Participant (Online Only)</td>
+                        <td class="py-3 px-4 font-semibold text-forest whitespace-nowrap">IDR 500,000</td>
                         <td class="py-3 px-4 text-gray-600 text-xs hidden md:table-cell">Full virtual access, tailored for domestic researchers and practitioners.</td>
-                    </tr>
-                    <tr class="hover:bg-forest/5 transition-colors">
-                        <td class="py-3 px-4 font-medium text-gray-800">Indonesia Participant (On-site / Limited)</td>
-                        <td class="py-3 px-4 font-semibold text-forest whitespace-nowrap">IDR 750,000</td>
-                        <td class="py-3 px-4 text-gray-600 text-xs hidden md:table-cell">In-person access in Bali, catering, conference kit. Strictly limited quota.</td>
-                    </tr>
-                    <tr class="hover:bg-forest/5 transition-colors">
-                        <td class="py-3 px-4 font-medium text-gray-800">Student Participant (Online Only)</td>
-                        <td class="py-3 px-4 font-semibold text-forest whitespace-nowrap">IDR 150,000</td>
-                        <td class="py-3 px-4 text-gray-600 text-xs hidden md:table-cell">Virtual Listener (Non-Presenter) status only. Valid Student ID (KTM) required upon upload.</td>
                     </tr>
                     <tr class="hover:bg-forest/5 transition-colors">
                         <td class="py-3 px-4 font-medium text-gray-800">Indian Delegates (On-site Presenter)</td>
@@ -213,9 +186,7 @@
             <div class="bg-ivory rounded-lg p-3 text-xs text-gray-600 space-y-2">
                 <p><strong>International (On-site):</strong> Physical venue access, refreshments, lunch, conference kit, e-certificate, journal review track.</p>
                 <p><strong>International (Online):</strong> Full virtual access to the conference platform, journal review track.</p>
-                <p><strong>Indonesia (Online):</strong> Full virtual access, tailored for domestic researchers and practitioners.</p>
-                <p><strong>Indonesia (On-site / Limited):</strong> In-person access in Bali, catering, conference kit. Strictly limited quota.</p>
-                <p><strong>Student (Online Only):</strong> Virtual Listener (Non-Presenter) status only. Valid Student ID (KTM) required upon upload.</p>
+                <p><strong>Indonesia (Online Only):</strong> Full virtual access, tailored for domestic researchers and practitioners.</p>
                 <p><strong>Indian (On-site Presenter):</strong> Refreshments, lunch, conference kit, certificate, journal review track.</p>
                 <p><strong>Indian (On-site Non-Presenter):</strong> Refreshments, lunch, conference kit, attendee certificate.</p>
             </div>
