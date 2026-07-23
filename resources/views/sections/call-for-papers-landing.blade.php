@@ -82,11 +82,17 @@
                     <h3 class="text-xl font-semibold text-gray-900 mb-3">Ready to Submit?</h3>
                     <p class="text-gray-600 mb-6">Share your research and contribute to the global dialogue on climate resilience.</p>
                     <div class="flex flex-col sm:flex-row gap-3">
-                        <a href="/templates/GETS2026_Abstract_Template.docx" download="GETS2026_Abstract_Template.docx" class="inline-flex items-center justify-center gap-2 px-6 py-3 bg-white text-forest font-semibold rounded-lg border-2 border-forest hover:bg-forest/5 transition-colors">
+                        <a href="/templates/GETS-Abstract%20Submission-Guideline-2026.docx" download="GETS-Abstract Submission-Guideline-2026.docx" class="inline-flex items-center justify-center gap-2 px-6 py-3 bg-white text-forest font-semibold rounded-lg border-2 border-forest hover:bg-forest/5 transition-colors">
                             <svg class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                                 <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 16v1a3 3 0 003 3h10a3 3 0 003-3v-1m-4-4l-4 4m0 0l-4-4m4 4V4" />
                             </svg>
-                            <span>Download Template</span>
+                            <span>Download Template (.DOCX)</span>
+                        </a>
+                        <a href="/templates/GETS-Abstract%20Submission-Guideline-2026.pdf" download="GETS-Abstract Submission-Guideline-2026.pdf" class="inline-flex items-center justify-center gap-2 px-6 py-3 bg-white text-forest font-semibold rounded-lg border-2 border-forest hover:bg-forest/5 transition-colors">
+                            <svg class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M7 21h10a2 2 0 002-2V9.414a1 1 0 00-.293-.707l-5.414-5.414A1 1 0 0012.586 3H7a2 2 0 00-2 2v14a2 2 0 002 2z" />
+                            </svg>
+                            <span>Download Template (.PDF)</span>
                         </a>
                         <a href="{{ route('conference.call-for-abstract') }}" class="inline-flex items-center justify-center gap-2 px-6 py-3 bg-forest text-white font-semibold rounded-lg hover:bg-forest-700 transition-colors shadow-md hover:shadow-lg">
                             <span>Submit Your Abstract</span>
