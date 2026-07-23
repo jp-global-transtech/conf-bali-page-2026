@@ -4,7 +4,7 @@
 
 @section('content')
 @php
-    $allSpeakers = collect(include resource_path('data/speakers.php'))->filter(fn($s) => $s['photo'] !== null)->values();
+    $allSpeakers = collect(include resource_path('data/speakers.php'))->values();
 @endphp
 
 <div class="min-h-screen bg-white pt-20">
@@ -33,7 +33,8 @@
     <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-12 mt-8">
         <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 gap-8">
             @foreach ($allSpeakers as $speaker)
-                <div class="bg-white border border-gray-200 rounded-2xl p-6 text-center hover:shadow-lg transition-all relative pt-10">
+                <div class="bg-white border border-gray-200 rounded-2xl p-6 text-center hover:shadow-lg transition-all relative pt-10
+                    {{ !$speaker['confirmed'] ? 'opacity-75 grayscale' : '' }}">
                     {{-- Status Badge --}}
                     @if(!$speaker['confirmed'])
                         {{-- Unconfirmed speaker - show Invitation in Progress --}}
@@ -58,7 +59,7 @@
                     {{-- Speaker Photo --}}
                     <div class="mx-auto w-32 h-32 rounded-full @if($speaker['photo'] && file_exists(public_path($speaker['photo']))) from-green-50 to-green-100 @else from-amber-50 to-amber-100 @endif flex items-center justify-center overflow-hidden mb-4">
                         @if ($speaker['photo'] && file_exists(public_path($speaker['photo'])))
-                            <img src="{{ asset($speaker['photo']) }}" alt="{{ $speaker['name'] }}" class="w-full h-full object-cover">
+                            <img src="{{ asset($speaker['photo']) }}" alt="{{ $speaker['name'] }}" class="w-full h-full object-cover {{ !$speaker['confirmed'] ? 'grayscale' : '' }}">
                         @else
                             <span class="text-3xl font-bold @if($speaker['photo'] && file_exists(public_path($speaker['photo']))) text-green-600 @else text-amber-600 @endif">{{ $speaker['initials'] }}</span>
                         @endif

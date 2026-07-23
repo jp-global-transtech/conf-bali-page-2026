@@ -4,7 +4,7 @@
 --}}
 
 @php
-    $allSpeakers = collect(include resource_path('data/speakers.php'))->filter(fn($s) => $s['photo'] !== null)->values();
+    $allSpeakers = collect(include resource_path('data/speakers.php'))->values();
 @endphp
 
 <section id="speakers" class="relative">

@@ -10,7 +10,7 @@
         @php
             $statItems = [
                 ['value' => $stats['total'],     'label' => 'Total speakers confirmed', 'color' => 'text-emerald-600'],
-                ['value' => $stats['keynote'],   'label' => 'Keynote speakers',          'color' => 'text-amber-600'],
+                ['value' => $stats['plenary'],   'label' => 'Plenary speakers',          'color' => 'text-amber-600'],
                 ['value' => $stats['invited'],   'label' => 'Invited speakers',          'color' => 'text-orange-600'],
                 ['value' => $stats['countries'], 'label' => 'Countries represented',     'color' => 'text-slate-500'],
             ];
@@ -30,10 +30,9 @@
         {{-- Role filters --}}
         @php
             $roleTabs = [
-                ['key' => 'all',          'label' => 'All speakers'],
-                ['key' => 'chief_patron', 'label' => 'Keynote'],
-                ['key' => 'keynote',      'label' => 'Keynote'],
-                ['key' => 'invited',      'label' => 'Invited'],
+                ['key' => 'all',     'label' => 'All speakers'],
+                ['key' => 'plenary', 'label' => 'Plenary'],
+                ['key' => 'invited', 'label' => 'Invited'],
             ];
         @endphp
 
@@ -143,7 +142,7 @@
                                 wire:click="openModal({{ $speaker['id'] }})"
                             />
                         @else
-                            <x-speakers.tbc-card />
+                            <x-speakers.tbc-card :speaker="$speaker" />
                         @endif
                     </div>
                 @endforeach

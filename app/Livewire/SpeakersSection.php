@@ -17,12 +17,10 @@ class SpeakersSection extends Component
     #[Locked]
     public ?array $modalSpeaker = null;
 
-    // Only show speakers with photos available
     #[Computed]
     public function speakers(): array
     {
         return collect(include resource_path('data/speakers.php'))
-            ->filter(fn($s) => $s['photo'] !== null)
             ->values()
             ->all();
     }
@@ -31,7 +29,7 @@ class SpeakersSection extends Component
     public function chiefPatron(): array
     {
         return collect($this->speakers())
-            ->where('role', 'chief_patron')
+            ->where('role', 'plenary')
             ->filter($this->applyFilters(...))
             ->values()
             ->all();
@@ -62,7 +60,7 @@ class SpeakersSection extends Component
     {
         return [
             'total' => collect($this->speakers())->where('confirmed', true)->count(),
-            'keynote' => collect($this->speakers())->where('role', 'keynote')->where('confirmed', true)->count(),
+            'plenary' => collect($this->speakers())->where('role', 'plenary')->where('confirmed', true)->count(),
             'invited' => collect($this->speakers())->where('role', 'invited')->where('confirmed', true)->count(),
             'countries' => collect($this->speakers())->pluck('country')->unique()->count(),
         ];
@@ -71,8 +69,7 @@ class SpeakersSection extends Component
     protected function applyFilters(array $speaker): bool
     {
         $roleMatch = $this->roleFilter === 'all'
-            || $this->roleFilter === 'chief_patron' && $speaker['role'] === 'chief_patron'
-            || $this->roleFilter === 'keynote' && $speaker['role'] === 'keynote'
+            || $this->roleFilter === 'plenary' && $speaker['role'] === 'plenary'
             || $this->roleFilter === 'invited' && $speaker['role'] === 'invited';
 
         $countryMatch = $this->countryFilter === 'all'
