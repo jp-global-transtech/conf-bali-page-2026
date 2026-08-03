@@ -65,35 +65,18 @@
     </div>
 
     {{-- ═══════════════════════════════════════════════════════════════
-         SECTION A · PLENARY / CHIEF PATRON
+         SECTION A · PLENARY SPEAKERS
          ═══════════════════════════════════════════════════════════════ --}}
     @if (count($chiefPatron) > 0)
         <div class="mb-14">
             <x-speakers.section-label
                 color="emerald"
-                tag="Opening address"
-                heading="Keynote Speaker"
-            />
-
-            @foreach ($chiefPatron as $speaker)
-                <x-speakers.keynote-card :speaker="$speaker" />
-            @endforeach
-        </div>
-    @endif
-
-    {{-- ═══════════════════════════════════════════════════════════════
-         SECTION B · KEYNOTE SPEAKERS
-         ═══════════════════════════════════════════════════════════════ --}}
-    @if (count($keynote) > 0)
-        <div class="mb-14">
-            <x-speakers.section-label
-                color="amber"
-                tag="Keynote sessions"
-                heading="Keynote Speakers"
+                tag="Plenary sessions"
+                heading="Plenary Speakers"
             />
 
             <div class="grid grid-cols-1 md:grid-cols-2 gap-5">
-                @foreach ($keynote as $speaker)
+                @foreach ($chiefPatron as $speaker)
                     <x-speakers.keynote-card
                         :speaker="$speaker"
                         wire:click="openModal({{ $speaker['id'] }})"
@@ -104,7 +87,7 @@
     @endif
 
     {{-- ═══════════════════════════════════════════════════════════════
-         SECTION C · INVITED SPEAKERS
+         SECTION B · INVITED SPEAKERS
          ═══════════════════════════════════════════════════════════════ --}}
     @if (count($invited) > 0)
         <div class="mb-14">
@@ -151,7 +134,7 @@
     @endif
 
     {{-- Empty state --}}
-    @if (count($chiefPatron) === 0 && count($keynote) === 0 && count($invited) === 0)
+    @if (count($chiefPatron) === 0 && count($invited) === 0)
         <div class="text-center py-20 text-slate-400 text-sm">
             <i class="ti ti-users text-3xl block mb-2 opacity-30" aria-hidden="true"></i>
             Tidak ada speaker yang sesuai filter.

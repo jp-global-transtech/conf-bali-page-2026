@@ -36,16 +36,6 @@ class SpeakersSection extends Component
     }
 
     #[Computed]
-    public function keynote(): array
-    {
-        return collect($this->speakers())
-            ->where('role', 'keynote')
-            ->filter($this->applyFilters(...))
-            ->values()
-            ->all();
-    }
-
-    #[Computed]
     public function invited(): array
     {
         return collect($this->speakers())
