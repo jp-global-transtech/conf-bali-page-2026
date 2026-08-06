@@ -22,7 +22,7 @@
         @endif
 
         {{-- Photo --}}
-        @if ($speaker['photo'])
+        @if ($speaker['photo'] && $speaker['confirmed'])
             <img
                 src="{{ asset($speaker['photo']) }}"
                 alt="Photo of {{ $speaker['name'] }}"

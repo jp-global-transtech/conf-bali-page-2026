@@ -42,23 +42,23 @@
             </a>
 
             {{-- Indian Delegates --}}
-            <a href="/docs/GETS_2026_Indian_Guidelines.pdf" target="_blank" class="bg-white/10 backdrop-blur rounded-xl p-6 border border-white/20 hover:bg-white/20 transition-all group">
+            <div class="bg-white/5 backdrop-blur rounded-xl p-6 border border-white/20">
                 <div class="flex items-center gap-3 mb-3">
-                    <div class="w-10 h-10 bg-white/20 rounded-lg flex items-center justify-center">
+                    <div class="w-10 h-10 bg-white/10 rounded-lg flex items-center justify-center">
                         <svg class="w-5 h-5 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                             <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M3 21v-4m0 0V5a2 2 0 012-2h6.5l1 1H21l-3 6 3 6h-8.5l-1-1H5a2 2 0 00-2 2zm9-13.5V9" />
                         </svg>
                     </div>
                     <h3 class="font-semibold text-white">Indian Delegates</h3>
                 </div>
-                <p class="text-sm text-white/80 mb-3">Coordinated by NEMA</p>
-                <span class="inline-flex items-center gap-1 text-white font-medium text-sm group-hover:gap-2 transition-all">
-                    Download Guidelines
+                <p class="text-sm text-white/80 mb-3">Registration Closed · Coordinated by NEMA</p>
+                <span class="inline-flex items-center gap-1 text-white/50 font-medium text-sm">
                     <svg class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 10v6m0 0l-3-3m3 3l3-3m2 8H7a2 2 0 01-2-2V5a2 2 0 012-2h5.586a1 1 0 01.707.293l5.414 5.414a1 1 0 01.293.707V19a2 2 0 01-2 2z" />
+                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M18.364 18.364A9 9 0 005.636 5.636m12.728 12.728A9 9 0 015.636 5.636m12.728 12.728L5.636 5.636" />
                     </svg>
+                    Registration has closed
                 </span>
-            </a>
+            </div>
         </div>
 
         {{-- Additional Info --}}

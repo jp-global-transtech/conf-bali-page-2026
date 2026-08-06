@@ -9,7 +9,7 @@
     </div>
 
     {{-- Avatar / Initials --}}
-    @if ($speaker['photo'])
+    @if ($speaker['photo'] && $speaker['confirmed'])
         <img
             src="{{ asset($speaker['photo']) }}"
             alt="{{ $speaker['name'] }}"

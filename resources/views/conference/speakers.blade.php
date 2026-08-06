@@ -57,11 +57,11 @@
                     @endif
 
                     {{-- Speaker Photo --}}
-                    <div class="mx-auto w-32 h-32 rounded-full @if($speaker['photo'] && file_exists(public_path($speaker['photo']))) from-green-50 to-green-100 @else from-amber-50 to-amber-100 @endif flex items-center justify-center overflow-hidden mb-4">
-                        @if ($speaker['photo'] && file_exists(public_path($speaker['photo'])))
-                            <img src="{{ asset($speaker['photo']) }}" alt="{{ $speaker['name'] }}" class="w-full h-full object-cover {{ !$speaker['confirmed'] ? 'grayscale' : '' }}">
+                    <div class="mx-auto w-32 h-32 rounded-full @if($speaker['confirmed'] && $speaker['photo'] && file_exists(public_path($speaker['photo']))) from-green-50 to-green-100 @else from-amber-50 to-amber-100 @endif flex items-center justify-center overflow-hidden mb-4">
+                        @if ($speaker['confirmed'] && $speaker['photo'] && file_exists(public_path($speaker['photo'])))
+                            <img src="{{ asset($speaker['photo']) }}" alt="{{ $speaker['name'] }}" class="w-full h-full object-cover">
                         @else
-                            <span class="text-3xl font-bold @if($speaker['photo'] && file_exists(public_path($speaker['photo']))) text-green-600 @else text-amber-600 @endif">{{ $speaker['initials'] }}</span>
+                            <span class="text-3xl font-bold @if($speaker['confirmed'] && $speaker['photo'] && file_exists(public_path($speaker['photo']))) text-green-600 @else text-amber-600 @endif">{{ $speaker['initials'] }}</span>
                         @endif
                     </div>
 

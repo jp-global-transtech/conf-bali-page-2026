@@ -21,6 +21,9 @@
     {{-- Distinguished Speakers --}}
     <div class="bg-gray-50 py-16">@include('sections.speaker-experience')</div>
 
+    {{-- Important Dates Timeline --}}
+    <div>@include('sections.important-dates-timeline')</div>
+
     {{-- Who Should Attend --}}
     <div>@include('sections.who-should-attend')</div>
 
