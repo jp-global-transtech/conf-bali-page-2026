@@ -105,7 +105,7 @@ return [
     [
         'id'          => 8,
         'role'        => 'plenary',
-        'name'        => 'Prof. I Gede Hendrawan, S.Si., M.Si., Ph.D.',
+        'name'        => 'I Gede Hendrawan, S.Si., M.Si., Ph.D.',
         'title'       => 'Professor',
         'department'  => 'Marine Science',
         'institution' => 'Universitas Udayana',
