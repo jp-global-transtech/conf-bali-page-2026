@@ -121,9 +121,91 @@
                 <div class="max-w-5xl mx-auto space-y-8">
 
                     {{-- ════════════════════════════════════════════
+                         Latest Important Dates Timeline
+                         ════════════════════════════════════════════ --}}
+                    <div class="bg-white rounded-2xl border border-forest/10 shadow-sm p-6 md:p-8">
+                        <div class="text-center mb-8">
+                            <h3 class="font-display text-2xl md:text-3xl text-forest font-bold">
+                                Key Milestones
+                            </h3>
+                            <p class="text-sm text-earth mt-1">Timeline terbaru menuju GETS 2026</p>
+                        </div>
+
+                        <div class="relative">
+                            <div class="absolute left-8 top-0 bottom-0 w-0.5 bg-forest/15"></div>
+
+                            @php
+                                $milestones = [
+                                    ['icon' => 'calendar', 'date' => '7 Aug',  'title' => 'Registration Opens',        'desc' => 'Call for Abstracts'],
+                                    ['icon' => 'document', 'date' => '15 Aug', 'title' => 'Submission Deadline',        'desc' => ''],
+                                    ['icon' => 'check',    'date' => '19 Aug', 'title' => 'Acceptance Notification',    'desc' => ''],
+                                    ['icon' => 'card',     'date' => '20 Aug', 'title' => 'Presenter Confirmation & Payment Deadline', 'desc' => ''],
+                                    ['icon' => 'book',     'date' => '21 Aug', 'title' => 'Final Program Released',     'desc' => ''],
+                                    ['icon' => 'mic',      'date' => '24 Aug', 'title' => 'GETS 2026 Conference',       'desc' => ''],
+                                ];
+                            @endphp
+
+                            @foreach ($milestones as $item)
+                                <div class="relative flex items-start gap-6 mb-8 last:mb-0">
+                                    <div class="relative z-10 flex-shrink-0">
+                                        <div class="w-16 h-16 rounded-full bg-white border-2 border-forest/20 shadow-sm flex items-center justify-center">
+                                            @if ($item['icon'] === 'calendar')
+                                                <svg class="w-6 h-6 text-forest" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M8 7V3m8 4V3m-9 8h10M5 21h14a2 2 0 002-2V7a2 2 0 00-2-2H5a2 2 0 00-2 2v12a2 2 0 002 2z" />
+                                                </svg>
+                                            @elseif ($item['icon'] === 'document')
+                                                <svg class="w-6 h-6 text-forest" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 12h6m-6 4h6m2 5H7a2 2 0 01-2-2V5a2 2 0 012-2h5.586a1 1 0 01.707.293l5.414 5.414a1 1 0 01.293.707V19a2 2 0 01-2 2z" />
+                                                </svg>
+                                            @elseif ($item['icon'] === 'check')
+                                                <svg class="w-6 h-6 text-forest" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 12l2 2 4-4m6 2a9 9 0 11-18 0 9 9 0 0118 0z" />
+                                                </svg>
+                                            @elseif ($item['icon'] === 'card')
+                                                <svg class="w-6 h-6 text-forest" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M3 10h18M7 15h.01M11 15h2M5 6h14a2 2 0 012 2v8a2 2 0 01-2 2H5a2 2 0 01-2-2V8a2 2 0 012-2z" />
+                                                </svg>
+                                            @elseif ($item['icon'] === 'book')
+                                                <svg class="w-6 h-6 text-forest" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 6.253v13m0-13C10.832 5.477 9.246 5 7.5 5S4.168 5.477 3 6.253v13C4.168 18.477 5.754 18 7.5 18s3.332.477 4.5 1.253m0-13C13.168 5.477 14.754 5 16.5 5c1.747 0 3.332.477 4.5 1.253v13C19.832 18.477 18.247 18 16.5 18c-1.746 0-3.332.477-4.5 1.253" />
+                                                </svg>
+                                            @elseif ($item['icon'] === 'mic')
+                                                <svg class="w-6 h-6 text-forest" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 11a7 7 0 01-14 0m7 7v4m-4 0h8m-4-11a3 3 0 100-6 3 3 0 000 6z" />
+                                                </svg>
+                                            @endif
+                                        </div>
+                                    </div>
+
+                                    <div class="flex-1 pt-3">
+                                        <span class="inline-block px-3 py-1 text-xs font-semibold rounded-full mb-2 bg-forest/10 text-forest">
+                                            {{ $item['date'] }}
+                                        </span>
+                                        <h4 class="text-lg font-semibold text-gray-900 mb-1">{{ $item['title'] }}</h4>
+                                        @if (!empty($item['desc']))
+                                            <p class="text-gray-600 text-sm">{{ $item['desc'] }}</p>
+                                        @endif
+                                    </div>
+                                </div>
+                            @endforeach
+                        </div>
+                    </div>
+
+                    {{-- ════════════════════════════════════════════
                          Indian Delegates (Coordinated by NEMA)
                          ════════════════════════════════════════════ --}}
-                    <div class="bg-gradient-to-br from-orange-50 to-amber-50 rounded-2xl p-6 md:p-8 border border-orange-200/60">
+                    <div class="relative bg-gradient-to-br from-orange-50 to-amber-50 rounded-2xl p-6 md:p-8 border border-orange-200/60">
+                        {{-- Registration Closed Badge --}}
+                        <div class="absolute -top-3 right-4 md:right-6 z-10">
+                            <span class="inline-flex items-center gap-1.5 px-3 py-1.5 bg-red-500 text-white text-xs font-bold rounded-full shadow-lg">
+                                <span class="relative flex h-2 w-2">
+                                    <span class="animate-ping absolute inline-flex h-full w-full rounded-full bg-white opacity-75"></span>
+                                    <span class="relative inline-flex rounded-full h-2 w-2 bg-white"></span>
+                                </span>
+                                Registration Closed
+                            </span>
+                        </div>
+
                         <div class="flex items-center gap-3 mb-6">
                             <div class="w-10 h-10 bg-orange-500 rounded-lg flex items-center justify-center flex-shrink-0">
                                 <svg class="w-5 h-5 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24">
@@ -136,24 +218,24 @@
                             </div>
                         </div>
                         <div class="grid grid-cols-1 md:grid-cols-2 gap-4">
-                            <div class="bg-white rounded-xl p-5 border border-orange-200 shadow-sm">
+                            <div class="bg-white rounded-xl p-5 border border-orange-200 shadow-sm opacity-80">
                                 <div class="flex items-center gap-2 mb-3">
-                                    <svg class="w-5 h-5 text-orange-500" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                    <svg class="w-5 h-5 text-orange-300 flex-shrink-0" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                                         <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M8 7V3m8 4V3m-9 8h10M5 21h14a2 2 0 002-2V7a2 2 0 00-2-2H5a2 2 0 00-2 2v12a2 2 0 002 2z" />
                                     </svg>
                                     <span class="text-sm font-semibold text-gray-900">Abstract Submission</span>
                                 </div>
-                                <p class="text-2xl md:text-3xl font-bold text-orange-600">15 July 2026</p>
+                                <p class="text-2xl md:text-3xl font-bold text-gray-400 line-through decoration-gray-300">15 July 2026</p>
                                 <p class="text-xs text-gray-500 mt-1">For Presenters / Authors</p>
                             </div>
-                            <div class="bg-white rounded-xl p-5 border border-orange-200 shadow-sm">
+                            <div class="bg-white rounded-xl p-5 border border-orange-200 shadow-sm opacity-80">
                                 <div class="flex items-center gap-2 mb-3">
-                                    <svg class="w-5 h-5 text-orange-500" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                    <svg class="w-5 h-5 text-orange-300 flex-shrink-0" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                                         <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 12l2 2 4-4m5.618-4.016A11.955 11.955 0 0112 2.944a11.955 11.955 0 01-8.618 3.04A12.02 12.02 0 003 9c0 5.591 3.824 10.29 9 11.622 5.176-1.332 9-6.03 9-11.622 0-1.042-.133-2.052-.382-3.016z" />
                                     </svg>
                                     <span class="text-sm font-semibold text-gray-900">Registration Deadline</span>
                                 </div>
-                                <p class="text-2xl md:text-3xl font-bold text-orange-600">25 July 2026</p>
+                                <p class="text-2xl md:text-3xl font-bold text-gray-400 line-through decoration-gray-300">25 July 2026</p>
                                 <p class="text-xs text-gray-500 mt-1">For All Delegates</p>
                             </div>
                         </div>
@@ -162,51 +244,6 @@
                             <a href="/docs/GETS_2026_Indian_Guidelines.pdf" target="_blank" class="text-orange-600 hover:text-orange-700 font-medium underline underline-offset-2">Indian Guidelines PDF</a>
                             or email
                             <a href="mailto:secretarynema2016@gmail.com" class="text-orange-600 hover:text-orange-700 font-medium underline underline-offset-2">secretarynema2016@gmail.com</a>
-                        </p>
-                    </div>
-
-                    {{-- ════════════════════════════════════════════
-                         Indonesia & International Participants
-                         ════════════════════════════════════════════ --}}
-                    <div class="bg-gradient-to-br from-emerald-50 to-teal-50 rounded-2xl p-6 md:p-8 border border-emerald-200/60">
-                        <div class="flex items-center gap-3 mb-6">
-                            <div class="w-10 h-10 bg-teal-600 rounded-lg flex items-center justify-center flex-shrink-0">
-                                <svg class="w-5 h-5 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M3.055 11H5a2 2 0 012 2v1a2 2 0 002 2 2 2 0 012 2v2.945M8 3.935V5.5A2.5 2.5 0 0010.5 8h.5a2 2 0 012 2 2 2 0 104 0 2 2 0 012-2h1.064M15 20.488V18a2 2 0 012-2h3.064M21 12a9 9 0 11-18 0 9 9 0 0118 0z" />
-                                </svg>
-                            </div>
-                            <div>
-                                <h3 class="text-xl font-bold text-gray-900">Indonesia &amp; General International Participants</h3>
-                                <p class="text-sm text-gray-600">Direct Registration</p>
-                            </div>
-                        </div>
-                        <div class="grid grid-cols-1 md:grid-cols-2 gap-4">
-                            <div class="bg-white rounded-xl p-5 border border-emerald-200 shadow-sm">
-                                <div class="flex items-center gap-2 mb-3">
-                                    <svg class="w-5 h-5 text-teal-600" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M8 7V3m8 4V3m-9 8h10M5 21h14a2 2 0 002-2V7a2 2 0 00-2-2H5a2 2 0 00-2 2v12a2 2 0 002 2z" />
-                                    </svg>
-                                    <span class="text-sm font-semibold text-gray-900">Abstract Submission</span>
-                                </div>
-                                <p class="text-2xl md:text-3xl font-bold text-teal-700">10 August 2026</p>
-                                <p class="text-xs text-gray-500 mt-1">For Presenters / Authors</p>
-                            </div>
-                            <div class="bg-white rounded-xl p-5 border border-emerald-200 shadow-sm">
-                                <div class="flex items-center gap-2 mb-3">
-                                    <svg class="w-5 h-5 text-teal-600" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 12l2 2 4-4m5.618-4.016A11.955 11.955 0 0112 2.944a11.955 11.955 0 01-8.618 3.04A12.02 12.02 0 003 9c0 5.591 3.824 10.29 9 11.622 5.176-1.332 9-6.03 9-11.622 0-1.042-.133-2.052-.382-3.016z" />
-                                    </svg>
-                                    <span class="text-sm font-semibold text-gray-900">Registration Deadline</span>
-                                </div>
-                                <p class="text-2xl md:text-3xl font-bold text-teal-700">23 August 2026</p>
-                                <p class="text-xs text-gray-500 mt-1">For All Participants</p>
-                            </div>
-                        </div>
-                        <p class="text-sm text-gray-600 mt-4">
-                            Submit through the
-                            <a href="{{ config('conference.conf_ms_web_url') }}" target="_blank" class="text-teal-600 hover:text-teal-700 font-medium underline underline-offset-2">registration portal</a>
-                            or email your abstract to
-                            <a href="mailto:info@jptranstech.org" class="text-teal-600 hover:text-teal-700 font-medium underline underline-offset-2">info@jptranstech.org</a>
                         </p>
                     </div>
 
