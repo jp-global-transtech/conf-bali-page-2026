@@ -12,14 +12,17 @@
 @include('sections.hero-immersive')
 
 <div class="space-y-0">
+    {{-- Official Flyer --}}
+    <div>@include('sections.conference-flyer')</div>
+
     {{-- Logo Cloud Section --}}
     <div>@include('sections.logo-cloud')</div>
 
-    {{-- Why This Conference Matters --}}
-    <div>@include('sections.conference-philosophy')</div>
-
     {{-- Distinguished Speakers --}}
     <div class="bg-gray-50 py-16">@include('sections.speaker-experience')</div>
+
+    {{-- Why This Conference Matters --}}
+    <div>@include('sections.conference-philosophy')</div>
 
     {{-- Important Dates Timeline --}}
     <div>@include('sections.important-dates-timeline')</div>
