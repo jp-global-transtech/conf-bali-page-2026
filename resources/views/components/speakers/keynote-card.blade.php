@@ -23,13 +23,15 @@
 
         {{-- Photo --}}
         @if ($speaker['photo'] && $speaker['confirmed'])
-            <img
-                src="{{ asset($speaker['photo']) }}"
-                alt="Photo of {{ $speaker['name'] }}"
-                class="w-14 h-14 rounded-full object-cover flex-shrink-0 ring-2 ring-amber-100"
-            />
+            <div class="w-14 h-14 rounded-xl bg-amber-50 ring-2 ring-amber-100 overflow-hidden flex-shrink-0">
+                <img
+                    src="{{ asset($speaker['photo']) }}"
+                    alt="Photo of {{ $speaker['name'] }}"
+                    class="w-full h-full object-cover"
+                />
+            </div>
         @else
-            <div class="w-14 h-14 rounded-full bg-amber-50 border border-amber-200
+            <div class="w-14 h-14 rounded-xl bg-amber-50 border border-amber-200
                         flex items-center justify-center flex-shrink-0">
                 <span class="text-base font-medium text-amber-600">{{ $speaker['initials'] }}</span>
             </div>

@@ -29,14 +29,22 @@
         </div>
     </div>
 
-    {{-- All Speakers Grid --}}
+    {{-- All Speakers List --}}
     <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-12 mt-8">
-        <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 gap-8">
+        <div class="space-y-8">
             @foreach ($allSpeakers as $speaker)
-                <div class="bg-white border border-gray-200 rounded-2xl p-6 text-center hover:shadow-lg transition-all relative pt-10
+                <div class="bg-white border border-gray-200 rounded-2xl p-6 hover:shadow-lg transition-all relative flex flex-col sm:flex-row gap-6 sm:gap-8
                     {{ !$speaker['confirmed'] ? 'opacity-75 grayscale' : '' }}">
                     {{-- Status Badge --}}
-                    @if(!$speaker['confirmed'])
+                    @if(!empty($speaker['confirming']))
+                        {{-- In confirmation --}}
+                        <div class="absolute top-3 right-3 z-20">
+                            <span class="inline-flex items-center gap-1 px-2 py-1 bg-sky-50 text-sky-700 border border-sky-200 text-xs font-medium rounded-full">
+                                <span class="w-2 h-2 bg-sky-400 rounded-full animate-pulse"></span>
+                                In Confirmation
+                            </span>
+                        </div>
+                    @elseif(!$speaker['confirmed'])
                         {{-- Unconfirmed speaker - show Invitation in Progress --}}
                         <div class="absolute top-3 right-3 z-20">
                             <span class="inline-flex items-center gap-1 px-2 py-1 bg-amber-50 text-amber-700 border border-amber-200 text-xs font-medium rounded-full">
@@ -56,37 +64,55 @@
                         </div>
                     @endif
 
-                    {{-- Speaker Photo --}}
-                    <div class="mx-auto w-32 h-32 rounded-full @if($speaker['confirmed'] && $speaker['photo'] && file_exists(public_path($speaker['photo']))) from-green-50 to-green-100 @else from-amber-50 to-amber-100 @endif flex items-center justify-center overflow-hidden mb-4">
+                    {{-- Speaker Photo (left) --}}
+                    <div class="shrink-0 w-full sm:w-64 lg:w-72 aspect-[4/3] rounded-xl @if($speaker['confirmed'] && $speaker['photo'] && file_exists(public_path($speaker['photo']))) bg-gradient-to-br from-green-50 to-green-100 @else bg-gradient-to-br from-amber-50 to-amber-100 @endif flex items-center justify-center overflow-hidden">
                         @if ($speaker['confirmed'] && $speaker['photo'] && file_exists(public_path($speaker['photo'])))
-                            <img src="{{ asset($speaker['photo']) }}" alt="{{ $speaker['name'] }}" class="w-full h-full object-cover">
+                            <img src="{{ asset($speaker['photo']) }}" alt="{{ $speaker['name'] }}" class="w-full h-full object-contain">
                         @else
                             <span class="text-3xl font-bold @if($speaker['confirmed'] && $speaker['photo'] && file_exists(public_path($speaker['photo']))) text-green-600 @else text-amber-600 @endif">{{ $speaker['initials'] }}</span>
                         @endif
                     </div>
 
-                    {{-- Name --}}
-                    <h4 class="text-lg font-semibold text-gray-900 mb-2">{{ $speaker['name'] }}</h4>
+                    {{-- Speaker Details (right) --}}
+                    <div class="flex-1 min-w-0">
+                        {{-- Name & Country --}}
+                        <div class="flex flex-wrap items-center gap-2 mb-2">
+                            <h4 class="text-xl font-semibold text-gray-900">{{ $speaker['name'] }}</h4>
+                            @if(isset($speaker['country']) && $speaker['country'])
+                                <span class="inline-flex items-center px-2.5 py-0.5 bg-gray-100 text-gray-600 text-xs font-medium rounded-full">{{ $speaker['country'] }}</span>
+                            @endif
+                        </div>
 
-                    {{-- Title --}}
-                    @if(isset($speaker['title']) && $speaker['title'])
-                        <p class="text-gray-600 text-sm mb-1">{{ $speaker['title'] }}</p>
-                    @endif
+                        {{-- Title --}}
+                        @if(isset($speaker['title']) && $speaker['title'])
+                            <p class="text-gray-600 text-sm mb-1">{{ $speaker['title'] }}</p>
+                        @endif
 
-                    {{-- Department (if exists) --}}
-                    @if(isset($speaker['department']) && $speaker['department'])
-                        <p class="text-gray-500 text-xs mb-2">{{ $speaker['department'] }}</p>
-                    @endif
+                        {{-- Department (if exists) --}}
+                        @if(isset($speaker['department']) && $speaker['department'])
+                            <p class="text-gray-500 text-xs mb-2">{{ $speaker['department'] }}</p>
+                        @endif
 
-                    {{-- Institution --}}
-                    <p class="text-gray-700 text-sm font-medium mb-3">{{ $speaker['institution'] }}</p>
+                        {{-- Affiliation --}}
+                        @if(isset($speaker['institution']) && $speaker['institution'])
+                            <p class="text-gray-700 text-sm font-medium mb-3">{{ $speaker['institution'] }}</p>
+                        @endif
 
-                    {{-- Country --}}
-                    <p class="text-gray-400 text-sm mb-4">{{ $speaker['country'] }}</p>
+                        {{-- Topic --}}
+                        @if(isset($speaker['topic']) && $speaker['topic'])
+                            <div class="mb-3">
+                                <p class="text-xs font-semibold uppercase tracking-wider text-gray-400 mb-1">Topic</p>
+                                <p class="text-gray-600 text-sm leading-relaxed">{{ $speaker['topic'] }}</p>
+                            </div>
+                        @endif
 
-                    {{-- Topic --}}
-                    <div class="border-t border-gray-100 pt-4">
-                        <p class="text-gray-600 text-xs leading-relaxed">{{ $speaker['topic'] }}</p>
+                        {{-- Bio --}}
+                        @if(!empty($speaker['bio']))
+                            <div class="border-t border-gray-100 pt-3">
+                                <p class="text-xs font-semibold uppercase tracking-wider text-gray-400 mb-1">About</p>
+                                <p class="text-gray-600 text-sm leading-relaxed">{{ $speaker['bio'] }}</p>
+                            </div>
+                        @endif
                     </div>
                 </div>
             @endforeach

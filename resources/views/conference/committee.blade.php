@@ -91,14 +91,22 @@
 
                 <div class="bg-white border border-forest/20 rounded-2xl p-8 shadow-sm hover:shadow-md transition-shadow">
                     <div class="flex flex-col md:flex-row md:items-center md:justify-between gap-4">
-                        <div>
-                            <h3 class="text-xl md:text-2xl font-display font-bold text-forest mb-2">
-                                Universitas Udayana
-                            </h3>
-                            <p class="text-atmosphere font-medium text-sm mb-3">Lead Host</p>
-                            <p class="text-earth">
-                                Indonesia
-                            </p>
+                        <div class="flex items-center gap-5">
+                            <img
+                                src="{{ asset('images/logo/univ-udayana.png') }}"
+                                alt="Universitas Udayana Logo"
+                                class="w-20 h-20 object-contain flex-shrink-0"
+                                loading="lazy"
+                            >
+                            <div>
+                                <h3 class="text-xl md:text-2xl font-display font-bold text-forest mb-2">
+                                    Universitas Udayana
+                                </h3>
+                                <p class="text-atmosphere font-medium text-sm mb-3">Lead Host</p>
+                                <p class="text-earth">
+                                    Indonesia
+                                </p>
+                            </div>
                         </div>
                         <div class="flex items-center gap-3 px-4 py-2 bg-forest/10 rounded-xl">
                             <svg class="w-6 h-6 text-forest" fill="currentColor" viewBox="0 0 20 20">
@@ -121,14 +129,22 @@
 
                 <div class="bg-white border border-atmosphere/20 rounded-2xl p-8 shadow-sm hover:shadow-md transition-shadow">
                     <div class="flex flex-col md:flex-row md:items-center md:justify-between gap-4">
-                        <div>
-                            <h3 class="text-xl md:text-2xl font-display font-bold text-forest mb-2">
-                                FiNder U-CoE, Universitas Padjadjaran
-                            </h3>
-                            <p class="text-atmosphere font-medium text-sm mb-3">Co-Host & Project Management Office (PMO)</p>
-                            <p class="text-earth">
-                                Indonesia
-                            </p>
+                        <div class="flex items-center gap-5">
+                            <img
+                                src="{{ asset('images/logo/finder.png') }}"
+                                alt="FiNder U-CoE Logo"
+                                class="w-20 h-20 object-contain flex-shrink-0"
+                                loading="lazy"
+                            >
+                            <div>
+                                <h3 class="text-xl md:text-2xl font-display font-bold text-forest mb-2">
+                                    FiNder U-CoE, Universitas Padjadjaran
+                                </h3>
+                                <p class="text-atmosphere font-medium text-sm mb-3">Co-Host & Project Management Office (PMO)</p>
+                                <p class="text-earth">
+                                    Indonesia
+                                </p>
+                            </div>
                         </div>
                         <div class="flex items-center gap-3 px-4 py-2 bg-atmosphere/10 rounded-xl">
                             <svg class="w-6 h-6 text-atmosphere" fill="currentColor" viewBox="0 0 20 20">
@@ -156,11 +172,19 @@
                     {{-- DMU Card --}}
                     <div class="bg-white border border-earth/20 rounded-2xl p-6 shadow-sm hover:shadow-md transition-shadow">
                         <div class="flex flex-col gap-4">
-                            <div>
-                                <h3 class="text-lg font-display font-bold text-forest mb-2">
-                                    Dhanamanjuri University (DMU)
-                                </h3>
-                                <p class="text-atmosphere font-medium text-sm">Global Partner</p>
+                            <div class="flex items-center gap-4">
+                                <img
+                                    src="{{ asset('images/logo/dhanamanjuri-india.png') }}"
+                                    alt="Dhanamanjuri University Logo"
+                                    class="w-16 h-16 object-contain flex-shrink-0"
+                                    loading="lazy"
+                                >
+                                <div>
+                                    <h3 class="text-lg font-display font-bold text-forest mb-2">
+                                        Dhanamanjuri University (DMU)
+                                    </h3>
+                                    <p class="text-atmosphere font-medium text-sm">Global Partner</p>
+                                </div>
                             </div>
                             <div class="text-earth">
                                 <span class="text-sm">India</span>
@@ -178,11 +202,19 @@
                     {{-- NEMA Card --}}
                     <div class="bg-white border border-earth/20 rounded-2xl p-6 shadow-sm hover:shadow-md transition-shadow">
                         <div class="flex flex-col gap-4">
-                            <div>
-                                <h3 class="text-lg font-display font-bold text-forest mb-2">
-                                    North Eastern Management Association (NEMA)
-                                </h3>
-                                <p class="text-atmosphere font-medium text-sm">Global Partner</p>
+                            <div class="flex items-center gap-4">
+                                <img
+                                    src="{{ asset('images/logo/nema-india.png') }}"
+                                    alt="NEMA Logo"
+                                    class="w-16 h-16 object-contain flex-shrink-0"
+                                    loading="lazy"
+                                >
+                                <div>
+                                    <h3 class="text-lg font-display font-bold text-forest mb-2">
+                                        North Eastern Management Association (NEMA)
+                                    </h3>
+                                    <p class="text-atmosphere font-medium text-sm">Global Partner</p>
+                                </div>
                             </div>
                             <div class="text-earth">
                                 <span class="text-sm">India</span>

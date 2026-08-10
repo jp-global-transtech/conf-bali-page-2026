@@ -21,13 +21,15 @@
 
     {{-- Photo --}}
     @if ($speaker['photo'])
-        <img
-            src="{{ asset($speaker['photo']) }}"
-            alt="Photo of {{ $speaker['name'] }}"
-            class="w-14 h-14 rounded-full object-cover ring-2 ring-orange-100"
-        />
+        <div class="w-14 h-14 rounded-xl bg-orange-50 ring-2 ring-orange-100 overflow-hidden flex-shrink-0">
+            <img
+                src="{{ asset($speaker['photo']) }}"
+                alt="Photo of {{ $speaker['name'] }}"
+                class="w-full h-full object-cover"
+            />
+        </div>
     @else
-        <div class="w-14 h-14 rounded-full bg-orange-50 border border-orange-200
+        <div class="w-14 h-14 rounded-xl bg-orange-50 border border-orange-200
                     flex items-center justify-center flex-shrink-0">
             <span class="text-base font-medium text-orange-600">{{ $speaker['initials'] }}</span>
         </div>

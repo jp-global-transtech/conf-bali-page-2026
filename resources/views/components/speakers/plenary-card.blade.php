@@ -17,10 +17,10 @@
             <img
                 src="{{ asset($speaker['photo']) }}"
                 alt="Photo of {{ $speaker['name'] }}"
-                class="w-40 h-40 md:w-48 md:h-48 object-cover rounded-full"
+                class="w-40 h-40 md:w-48 md:h-48 object-cover rounded-2xl bg-slate-100"
             />
         @else
-            <div class="w-40 h-40 md:w-48 md:h-48 rounded-full bg-slate-200 flex items-center justify-center">
+            <div class="w-40 h-40 md:w-48 md:h-48 rounded-2xl bg-slate-200 flex items-center justify-center">
                 <span class="text-3xl font-medium text-slate-400">{{ $speaker['initials'] }}</span>
             </div>
         @endif

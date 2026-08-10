@@ -64,8 +64,17 @@
                     $loopSpeakers = $allSpeakers->concat($allSpeakers);
                 @endphp
                 @foreach ($loopSpeakers as $speaker)
-                    <div class="shrink-0 w-64 sm:w-56 lg:w-60">
-                    <div class="w-full bg-white rounded-2xl border border-slate-200 overflow-hidden hover:shadow-lg hover:-translate-y-1 transition-all duration-300 group flex flex-col">
+                    <div class="shrink-0 w-72 sm:w-64 lg:w-72">
+                    <div class="w-full bg-white rounded-2xl border border-slate-200 overflow-hidden hover:shadow-lg hover:-translate-y-1 transition-all duration-300 group flex flex-col relative">
+                        {{-- Status Badge --}}
+                        @if(!empty($speaker['confirming']))
+                            <div class="absolute top-3 right-3 z-20">
+                                <span class="inline-flex items-center gap-1 px-2 py-1 bg-sky-50 text-sky-700 border border-sky-200 text-xs font-medium rounded-full">
+                                    <span class="w-2 h-2 bg-sky-400 rounded-full animate-pulse"></span>
+                                    In Confirmation
+                                </span>
+                            </div>
+                        @endif
                         {{-- Photo (lazy) --}}
                         <div class="aspect-square p-3 overflow-hidden bg-gradient-to-br from-emerald-50 to-emerald-100">
                             @if ($speaker['photo'])
