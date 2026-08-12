@@ -4,6 +4,7 @@
 --}}
 @php
     $flyerFile = 'images/GETS_Official_Flyer_v.2.0_New.png';
+    $flyerUrl = asset($flyerFile) . '?v=' . (file_exists(public_path($flyerFile)) ? filemtime(public_path($flyerFile)) : '1');
 @endphp
 
 <section id="flyer" class="py-16 bg-white">
@@ -16,7 +17,7 @@
                     <div class="absolute -inset-2 bg-gradient-to-br from-forest/10 to-sage/10 rounded-3xl blur-lg"></div>
                     <div class="relative rounded-2xl overflow-hidden shadow-lg border border-gray-200 bg-white">
                         <img
-                            src="{{ asset($flyerFile) }}"
+                            src="{{ $flyerUrl }}"
                             alt="GETS 2026 Official Flyer"
                             class="w-full h-auto object-contain"
                             loading="lazy"
@@ -43,7 +44,7 @@
 
                 <div class="flex flex-col sm:flex-row gap-3 justify-center lg:justify-start">
                     <a
-                        href="{{ asset($flyerFile) }}"
+                        href="{{ $flyerUrl }}"
                         download="GETS_Official_Flyer_v.2.0_New.png"
                         class="inline-flex items-center justify-center gap-2 px-6 py-3 bg-forest text-white font-semibold rounded-lg hover:bg-forest-700 transition-colors shadow-md hover:shadow-lg"
                     >
