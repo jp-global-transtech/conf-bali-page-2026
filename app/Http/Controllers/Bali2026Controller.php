@@ -14,7 +14,7 @@ class Bali2026Controller extends Controller
      */
     public function index(): View
     {
-        return view('conference.landing');
+        return view('conference.landing', $this->selectedPapersData());
     }
 
     /**
@@ -107,6 +107,33 @@ class Bali2026Controller extends Controller
     public function insights(): View
     {
         return view('conference.insights');
+    }
+
+    /**
+     * Show the selected papers page
+     */
+    public function selectedPapers(): View
+    {
+        return view('conference.selected-papers', $this->selectedPapersData());
+    }
+
+    /**
+     * Load selected papers data shared by the landing page and the
+     * dedicated selected papers page.
+     *
+     * @return array<string, mixed>
+     */
+    private function selectedPapersData(): array
+    {
+        $papers = config('selected_papers', []);
+
+        $stats = [
+            'total' => count($papers),
+            'offline' => count(array_filter($papers, fn ($paper) => $paper['mode'] === 'offline')),
+            'online' => count(array_filter($papers, fn ($paper) => $paper['mode'] === 'online')),
+        ];
+
+        return compact('papers', 'stats');
     }
 
     /**

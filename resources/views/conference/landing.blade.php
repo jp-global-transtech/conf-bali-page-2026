@@ -33,6 +33,9 @@
     {{-- Conference Benefits --}}
     <div>@include('sections.conference-benefits')</div>
 
+    {{-- Selected Papers --}}
+    <div>@include('sections.selected-papers-preview', ['papers' => $papers, 'stats' => $stats])</div>
+
     {{-- Conference Updates --}}
     <div>@include('sections.conference-updates', ['importantDates' => $importantDates])</div>
 

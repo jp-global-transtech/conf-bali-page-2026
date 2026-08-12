@@ -49,11 +49,35 @@
                 {{-- Speakers --}}
                 <a href="{{ route('conference.speakers') }}" class="text-sm font-medium {{ request()->routeIs('conference.speakers', 'conference.invited-speakers') ? 'text-forest font-semibold' : 'text-gray-600 hover:text-forest' }} transition-colors">{{ __('navigation.speakers') }}</a>
 
-                {{-- Experience --}}
-                <a href="{{ route('conference.experience') }}" class="text-sm font-medium {{ request()->routeIs('conference.experience') ? 'text-forest font-semibold' : 'text-gray-600 hover:text-forest' }} transition-colors">Participant Guide</a>
+                {{-- Call for Abstract Dropdown --}}
+                <div class="relative" x-data="{ abstractOpen: false }">
+                    <button
+                        @click="abstractOpen = !abstractOpen"
+                        @click.away="abstractOpen = false"
+                        class="flex items-center gap-1 text-sm font-medium {{ request()->routeIs('conference.call-for-abstract', 'conference.selected-papers') ? 'text-forest font-semibold' : 'text-gray-600 hover:text-forest' }} transition-colors"
+                    >
+                        Call for Abstract
+                        <svg class="w-4 h-4 transition-transform" :class="{ 'rotate-180': abstractOpen }" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7" />
+                        </svg>
+                    </button>
 
-                {{-- Call for Abstract --}}
-                <a href="{{ route('conference.call-for-abstract') }}" class="text-sm font-medium {{ request()->routeIs('conference.call-for-abstract') ? 'text-forest font-semibold' : 'text-gray-600 hover:text-forest' }} transition-colors">Call for Abstract</a>
+                    {{-- Dropdown Menu --}}
+                    <div
+                        x-show="abstractOpen"
+                        x-cloak
+                        x-transition:enter="transition ease-out duration-100"
+                        x-transition:enter-start="transform opacity-0 scale-95"
+                        x-transition:enter-end="transform opacity-100 scale-100"
+                        x-transition:leave="transition ease-in duration-75"
+                        x-transition:leave-start="transform opacity-100 scale-100"
+                        x-transition:leave-end="transform opacity-0 scale-95"
+                        class="absolute left-0 mt-2 w-52 bg-white rounded-lg shadow-md border border-gray-200 py-1 z-[60]"
+                    >
+                        <a href="{{ route('conference.call-for-abstract') }}" class="block px-4 py-2 text-sm {{ request()->routeIs('conference.call-for-abstract') ? 'text-forest bg-gray-50 font-semibold' : 'text-gray-600 hover:bg-gray-50 hover:text-forest' }} transition-colors">Call for Abstract</a>
+                        <a href="{{ route('conference.selected-papers') }}" class="block px-4 py-2 text-sm {{ request()->routeIs('conference.selected-papers') ? 'text-forest bg-gray-50 font-semibold' : 'text-gray-600 hover:bg-gray-50 hover:text-forest' }} transition-colors">Selected Papers</a>
+                    </div>
+                </div>
 
                 {{-- Registration --}}
                 <a href="{{ route('conference.register') }}" class="text-sm font-medium {{ request()->routeIs('conference.register') ? 'text-forest font-semibold' : 'text-gray-600 hover:text-forest' }} transition-colors">{{ __('navigation.registration') }}</a>
@@ -186,11 +210,23 @@
             {{-- Speakers --}}
             <a href="{{ route('conference.speakers') }}" @click="mobileOpen = false" class="block px-4 py-2 {{ request()->routeIs('conference.speakers', 'conference.invited-speakers') ? 'text-forest bg-gray-50 font-semibold' : 'text-gray-600' }} hover:bg-gray-50 rounded-lg">{{ __('navigation.speakers') }}</a>
 
-            {{-- Experience --}}
-            <a href="{{ route('conference.experience') }}" @click="mobileOpen = false" class="block px-4 py-2 {{ request()->routeIs('conference.experience') ? 'text-forest bg-gray-50 font-semibold' : 'text-gray-600' }} hover:bg-gray-50 rounded-lg">Participant Guide</a>
+            {{-- Call for Abstract (Mobile) --}}
+            <div x-data="{ abstractMobileOpen: false }">
+                <button
+                    @click="abstractMobileOpen = !abstractMobileOpen"
+                    class="flex items-center justify-between w-full px-4 py-2 {{ request()->routeIs('conference.call-for-abstract', 'conference.selected-papers') ? 'text-forest font-semibold' : 'text-gray-600' }} hover:bg-gray-50 rounded-lg"
+                >
+                    Call for Abstract
+                    <svg class="w-4 h-4 transition-transform" :class="{ 'rotate-180': abstractMobileOpen }" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7" />
+                    </svg>
+                </button>
 
-            {{-- Call for Abstract --}}
-            <a href="{{ route('conference.call-for-abstract') }}" @click="mobileOpen = false" class="block px-4 py-2 {{ request()->routeIs('conference.call-for-abstract') ? 'text-forest bg-gray-50 font-semibold' : 'text-gray-600' }} hover:bg-gray-50 rounded-lg">Call for Abstract</a>
+                <div x-show="abstractMobileOpen" x-collapse class="pl-4 space-y-1">
+                    <a href="{{ route('conference.call-for-abstract') }}" @click="mobileOpen = false" class="block px-4 py-2 text-sm {{ request()->routeIs('conference.call-for-abstract') ? 'text-forest font-semibold' : 'text-gray-600' }} hover:bg-gray-50 rounded-lg">Call for Abstract</a>
+                    <a href="{{ route('conference.selected-papers') }}" @click="mobileOpen = false" class="block px-4 py-2 text-sm {{ request()->routeIs('conference.selected-papers') ? 'text-forest font-semibold' : 'text-gray-600' }} hover:bg-gray-50 rounded-lg">Selected Papers</a>
+                </div>
+            </div>
 
             {{-- Registration --}}
             <a href="{{ route('conference.register') }}" @click="mobileOpen = false" class="block px-4 py-2 {{ request()->routeIs('conference.register') ? 'text-forest bg-gray-50 font-semibold' : 'text-gray-600' }} hover:bg-gray-50 rounded-lg">{{ __('navigation.registration') }}</a>

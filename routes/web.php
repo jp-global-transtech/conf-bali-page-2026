@@ -24,6 +24,7 @@ Route::prefix('conference')->name('conference.')->group(function () {
     Route::get('/experience', [Bali2026Controller::class, 'experience'])->name('experience');
     Route::get('/participant-support', [Bali2026Controller::class, 'participantSupport'])->name('participant-support');
     Route::get('/insights', [Bali2026Controller::class, 'insights'])->name('insights');
+    Route::get('/selected-papers', [Bali2026Controller::class, 'selectedPapers'])->name('selected-papers');
     Route::get('/contact', [Bali2026Controller::class, 'contact'])->name('contact');
     Route::get('/call-for-abstract', [Bali2026Controller::class, 'callForAbstract'])->name('call-for-abstract');
     // Registration routes - Redirect to conf_ms_web

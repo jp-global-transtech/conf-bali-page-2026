@@ -32,6 +32,8 @@
                 <ul class="space-y-2 text-sm">
                     <li><a href="{{ route('conference.committee') }}" class="text-gray-400 hover:text-white transition-colors">{{ __('navigation.committee') }}</a></li>
                     <li><a href="{{ route('conference.experience') }}" class="text-gray-400 hover:text-white transition-colors">{{ __('navigation.experience') }}</a></li>
+                    <li><a href="{{ route('conference.call-for-abstract') }}" class="text-gray-400 hover:text-white transition-colors">Call for Abstract</a></li>
+                    <li><a href="{{ route('conference.selected-papers') }}" class="text-gray-400 hover:text-white transition-colors">Selected Papers</a></li>
                     <li><a href="{{ route('conference.landing') }}#register" class="text-gray-400 hover:text-white transition-colors">{{ __('navigation.registration') }}</a></li>
                     <li><a href="{{ route('conference.contact') }}" class="text-gray-400 hover:text-white transition-colors">{{ __('navigation.contact') }}</a></li>
                 </ul>
